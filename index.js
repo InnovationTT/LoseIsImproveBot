@@ -1,0 +1,234 @@
+// import? i think discord stuff
+const discord = require ('discord.js');
+var client = new discord.Client(); 
+const token = process.env.token;    
+
+// the prefix for commanding the bot e.g. "lii! advice"
+const prefix = "!lii ";
+
+// read json files
+const fs = require("fs");
+var attacks = require("./attacks.json");
+var cards = require("./cards.json");
+var type, aimTime, fireTime, reloadTime, clip, rangeMin, rangeMax, damage, radius;
+var lvl;  // modifier per lvl
+var numTargetPriority = [0, 0, 0, 0, 0, 0, 0], targetPriority = ["Light Infantry", "Heavy Infantry", "Trucks", "Tanks", "Helicopters", "Planes", "Bunker and Bases"];
+var targPrio = "Target Priority: ";
+var uid = "null", uid2 = "";
+
+client.on("ready", () => {
+    console.log("ready");
+    client.user.setActivity("with pepegas");
+});
+
+client.on("message", (message) => {
+    // if bot command prefix is in front
+    if (message.content.startsWith(prefix)){
+        var command = message.content.slice(prefix.length);
+        // help, list the commands
+        if(command.startsWith("help")){
+            message.channel.send("```============ Commands ============ \n advice: gives helpful life advice \n lookup (mini name) (level): gets the data on the mini of your choice. (WIP)```");
+        } 
+        // gives helpful life advice
+        else if (command.startsWith("advice")){
+            message.channel.send("lose is improve");
+        } 
+        // the current main feature of the bot: lookup mini stuff
+        //===========================================================================//
+        else if (command.startsWith("lookup")){
+            if (command.search("Standard Base") != -1){
+                uid = "rd_base";       
+            } else if (command.search("Anti-Vehicle Base") != -1){
+                uid = "rd_baseat";
+            } else if (command.search("Laser Base") != -1){
+                uid = "rd_baselaser";
+            } else if (command.search("Fire Base") != -1){
+                uid = "rd_baseflame";
+            } else if (command.search("Anti-Air Base") != -1){
+                uid = "rd_baseaa";
+            } else if (command.search("Sniper Base") != -1){
+                uid = "rd_basesniper";
+            } else if (command.search("Infantry") != -1){
+                uid = "rd_rifle";
+            } else if (command.search("Anti-Vehicle Infantry") != -1){
+                uid = "rd_atinfantry";
+            } else if (command.search("Attack Trooper") != -1){
+                uid = "rd_assault";
+            } else if (command.search("Stationary Gunner") != -1){
+                uid = "rd_hmg";
+            } else if (command.search("Laser Trooper") != -1){
+                uid = "rd_laserrifle";
+            } else if (command.search("Sniper") != -1){
+                uid = "rd_sniper";
+            } else if (command.search("Engineer") != -1){
+                uid = "rd_engineerA";
+                uid2 = "rd_engineerB";
+            } else if (command.search("Heavy Infantry") != -1){
+                uid = "rd_closequarter";
+            } else if (command.search("Heavy Mortar") != -1){
+                uid = "rd_howizter";
+            } else if (command.search("Pyroblaster") != -1){
+                uid = "rd_flamer";
+            } else if (command.search("Mecha-Soldier") != -1){
+                uid = "rd_mechasoldierA";
+                uid2 = "rd_mechasoldierB";
+            } else if (command.search("Attack Truck") != -1){
+                uid = "rd_mgtruck";
+            } else if (command.search("Anti-Air Truck") != -1){
+                uid = "rd_aatruck";
+            } else if (command.search("Hover Truck") != -1){
+                uid = "rd_hovertruckA";
+                uid2 = "rd_hovertruckB";
+            } else if (command.search("Motorcycle") != -1){
+                uid = "rd_bike";
+            } else if (command.search("Cannon Truck") != -1){
+                uid = "rd_attruck";
+            } else if (command.search("Sidecar") != -1){
+                uid = "rd_trike";
+            } else if (command.search("Ambulance") != -1){
+                uid = "rd_medictruck";
+            } else if (command.search("Mine Layer") != -1){
+                uid = "rd_minelayerA";
+                uid2 = "rd_minelayerB";
+            } else if (command.search("Tempest") != -1){
+                uid = "rd_railguntruck";
+            } else if (command.search("Standard Tank") != -1){
+                uid = "rd_tank";
+            } else if (command.search("Artillery Tank") != -1){
+                uid = "rd_artillery";
+            } else if (command.search("Shredder") != -1){
+                uid = "rd_shredder";
+            } else if (command.search("Anti-Air Tank") != -1){
+                uid = "rd_aatank";
+            } else if (command.search("Heavy Tank") != -1){
+                uid = "rd_heavytank";
+            } else if (command.search("Mini-Tank") != -1){
+                uid = "rd_minitank";
+            } else if (command.search("Rocket Artillery Tank") != -1){
+                uid = "rd_rocketart";
+            } else if (command.search("Dual-Tech Tank") != -1){
+                uid = "rd_commstankA";
+                uid2 = "rd_commstankB";
+            } else if (command.search("Soundwave Tank") != -1){
+                uid = "rd_sonictank";
+            } else if (command.search("Missile Defense") != -1){
+                uid = "rd_missiledef";
+            } else if (command.search("Command Tank") != -1){
+                uid = "rd_commandtank";
+            } else if (command.search("Laser Tank") != -1){
+                uid = "rd_lasertank";
+            } else if (command.search("Rocket Copter") != -1){
+                uid = "rd_apache";
+            } else if (command.search("Intercopter") != -1){
+                uid = "rd_interceptorA";
+                uid2 = "rd_interceptorB";
+            } else if (command.search("Drone") != -1){
+                uid = "rd_drone";
+            } else if (command.search("Bomb Balloon") != -1){
+                uid = "rd_balloon";
+            } else if (command.search("Hunter") != -1){
+                uid = "rd_jetA";
+                uid2 = "rd_jetB";
+            } else if (command.search("Fire Bomber") != -1){
+                uid = "rd_firebomberA";
+            } else if (command.search("Mini Tank Transporter") != -1){
+                uid = "rd_transport";
+            } else if (command.search("Doomsky") != -1){
+                uid = "rd_stealthbomber";
+            }
+            //=== end of dominion minis ===\\
+            // after getting the uid, get the data
+            lvl = parseInt(command.slice(command.length-2)); 
+            var dmgOffset = (lvl-1) * attacks[uid].damagePerLvl; 
+            if(uid2 !== "")
+                var dmgOffset2 = (lvl-1) * attacks[uid2].damagePerLvl; 
+            // get title
+            let faction = "null";
+            if(uid.startsWith("bl"))
+                faction = "(Republic) ";
+            else if(uid.startsWith("bk"))
+                faction = "(Empire) ";
+            else if(uid.startsWith("rd"))
+                faction = "(Dominion) ";
+
+            let name = command.substring(6, command.length-2);
+            // get targetting priority
+            numTargetPriority[0] = attacks[uid].targ_infantry;
+            numTargetPriority[1] = attacks[uid].targ_heavy;
+            numTargetPriority[2] = attacks[uid].targ_truck;
+            numTargetPriority[3] = attacks[uid].targ_tank;
+            numTargetPriority[4] = attacks[uid].targ_heli;
+            numTargetPriority[5] = attacks[uid].targ_plane;
+            numTargetPriority[6] = attacks[uid].targ_base;
+           
+            // loop through numTargetPriority to get order
+            // var max = 0;
+            // for(var i = 0; i < numTargetPriority.length; i++){
+            //     if(numTargetPriority[i]>max)
+            //         max = numTargetPriority[i];
+            // }
+            // for(var i = 0; i < numTargetPriority.length; i++){
+            //     for (var j = 0; j < numTargetPriority.length; j++){
+            //         if (numTargetPriority[i] < numTargetPriority[j] && numTargetPriority[i] !== numTargetPriority[j]){
+            //             if (numTargetPriority[i] = 0)
+            //                 targetPriority[i] = "null";
+            //             var temp = targetPriority[i];
+            //             targetPriority[i] = targetPriority[j];
+            //             targetPriority[j] = temp;
+            //         }
+            //     }
+                
+            // }
+        
+            // loop through the targetPriority to get the strings
+            // for(var i = 0; i < targetPriority.length; i++){
+            //     if(targetPriority[i] !== "null"){
+            //         targPrio += targetPriority[i];
+            //     }
+            //     else{
+            //         message.channel.send("null!");
+            //     }
+            // }
+            
+            // TODO: deal with spawns
+            if(uid != "null"){
+                var attackType = "";
+                if(attacks[uid].isHealing)
+                    attackType = "Healing";
+                else 
+                    attackType = attacks[uid].type;
+                var attack2 = "";
+                if(uid2 !== ""){
+                    if(attacks[uid2].isHealing){
+                        attackType2 = "Healing"
+                    } else {
+                        attackType2 = attacks[uid2].type;
+                    }
+                    attack2 = "\nAttack Type 2:\t\t\t\t"+attackType2+"\nDamage:   \t\t\t\t\t"+(attacks[uid2].damage+dmgOffset2)+"\nAim Time: \t\t\t\t\t"+attacks[uid2].aimTime/1000+"s\nFire Time:\t\t\t\t\t"+attacks[uid2].fireTime/1000+"s\nRange:\t\t\t\t\t\tfrom "+attacks[uid2]["range"].min/10+"m to "+attacks[uid2]["range"].max/10+"m"+"\nSpread: \t\t\t\t\t  from "+attacks[uid2]["spread"].min/10+"m to "+attacks[uid2]["spread"].max/10+"m"+"\nRadius:   \t\t\t\t\t"+attacks[uid2].radius/10+"m\nDamage vs Light Infantry: \t"+attacks[uid2].atk_infantry+"%\n"+"Damage vs Heavy Infantry: \t"+attacks[uid2].atk_heavy+"%\n"+"Damage vs Trucks: \t\t\t"+attacks[uid2].atk_truck+"%\n"+"Damage vs Tanks:  \t\t\t"+attacks[uid2].atk_tank+"%\n"+"Damage vs Helicopters:\t\t"+attacks[uid2].atk_heli+"%\n"+"Damage vs Planes: \t\t\t"+attacks[uid2].atk_plane+"%\n"+"Damage vs Bunkers and Base:   "+attacks[uid2].atk_base+"%\n";
+                }
+                //message.channel.send(targPrio);
+                message.channel.send("```============ "+faction+name+" level "+lvl+ " ============ \nAttack Type:  \t\t\t\t"+attackType+"\nDamage:   \t\t\t\t\t"+(attacks[uid].damage+dmgOffset)+"\nAim Time: \t\t\t\t\t"+attacks[uid].aimTime/1000+"s\nFire Time:\t\t\t\t\t"+attacks[uid].fireTime/1000+"s\nRange:\t\t\t\t\t\tfrom "+attacks[uid]["range"].min/10+"m to "+attacks[uid]["range"].max/10+"m"+"\nSpread: \t\t\t\t\t  from "+attacks[uid]["spread"].min/10+"m to "+attacks[uid]["spread"].max/10+"m"+"\nRadius:   \t\t\t\t\t"+attacks[uid].radius/10+"m\nDamage vs Light Infantry: \t"+attacks[uid].atk_infantry+"%\n"+"Damage vs Heavy Infantry: \t"+attacks[uid].atk_heavy+"%\n"+"Damage vs Trucks: \t\t\t"+attacks[uid].atk_truck+"%\n"+"Damage vs Tanks:  \t\t\t"+attacks[uid].atk_tank+"%\n"+"Damage vs Helicopters:\t\t"+attacks[uid].atk_heli+"%\n"+"Damage vs Planes: \t\t\t"+attacks[uid].atk_plane+"%\n"+"Damage vs Bunkers and Base:   "+attacks[uid].atk_base+"%\n"+attack2+"```" );
+                
+            }
+        } 
+        //===========================================================================//
+        // ask user to get help if they type nonsense hehexd
+        else {
+            message.channel.send("That is an unrecognized command. Use command \""+prefix+"help\" for some help xd.")
+        }
+        
+    }
+
+    // if(message.content.startsWith(prefix + "advice")){
+    //     message.reply("lose is improve");
+    // }
+
+
+    // if(message.content.startsWith(prefix + "lookup")){
+    //     data = attacks["bl_base"].aimTime;
+    //     message.channel.send("bl_base aimtime: "+data);
+        
+    // }
+});
+
+client.login(token);
