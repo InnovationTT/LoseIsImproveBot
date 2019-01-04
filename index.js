@@ -8,8 +8,8 @@ const prefix = "!lii ";
 
 // read json files
 const fs = require("fs");
-var attacks = require("C:/Users/greyl/AppData/Local/Temp/Riposte Games Co/Mini Guns/data/attacks.json");
-var cards = require("C:/Users/greyl/AppData/Local/Temp/Riposte Games Co/Mini Guns/data/cards.json");
+var attacks = require("./attacks.json");
+var cards = require("./cards.json");
 var type, aimTime, fireTime, reloadTime, clip, rangeMin, rangeMax, damage, radius;
 var lvl;  // modifier per lvl
 //var numTargetPriority = [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6)];
