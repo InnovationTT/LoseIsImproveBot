@@ -1,7 +1,7 @@
 // import? i think discord stuff
 const discord = require ('discord.js');
 var client = new discord.Client(); 
-const token = "NTMwMDMxOTY4ODkzNjY1MzAw.Dw5k1A.TVvvuzg7eV9idBIkMBANXLb6CaI";
+const token = process.env.token;
 
 // the prefix for commanding the bot e.g. "lii! advice"
 const prefix = "!lii ";
