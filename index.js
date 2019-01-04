@@ -1,18 +1,19 @@
 // import? i think discord stuff
 const discord = require ('discord.js');
 var client = new discord.Client(); 
-const token = process.env.token;    
+const token = "NTMwMDMxOTY4ODkzNjY1MzAw.Dw5k1A.TVvvuzg7eV9idBIkMBANXLb6CaI";
 
 // the prefix for commanding the bot e.g. "lii! advice"
 const prefix = "!lii ";
 
 // read json files
 const fs = require("fs");
-var attacks = require("./attacks.json");
-var cards = require("./cards.json");
+var attacks = require("C:/Users/greyl/AppData/Local/Temp/Riposte Games Co/Mini Guns/data/attacks.json");
+var cards = require("C:/Users/greyl/AppData/Local/Temp/Riposte Games Co/Mini Guns/data/cards.json");
 var type, aimTime, fireTime, reloadTime, clip, rangeMin, rangeMax, damage, radius;
 var lvl;  // modifier per lvl
-var numTargetPriority = [0, 0, 0, 0, 0, 0, 0], targetPriority = ["Light Infantry", "Heavy Infantry", "Trucks", "Tanks", "Helicopters", "Planes", "Bunker and Bases"];
+var numTargetPriority = [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6)];
+var targetPriority = ["Light Infantry", "Heavy Infantry", "Trucks", "Tanks", "Helicopters", "Planes", "Bunker and Bases"];
 var targPrio = "Target Priority: ";
 var uid = "null", uid2 = "";
 
@@ -135,8 +136,112 @@ client.on("message", (message) => {
                 uid = "rd_transport";
             } else if (command.search("Doomsky") != -1){
                 uid = "rd_stealthbomber";
-            }
+            } 
             //=== end of dominion minis ===\\
+            else if (command.search("Tank Buster Base") != -1){
+                uid = "bl_baseat";
+            } else if (command.search("Photon Base") != -1){
+                uid = "bl_baselaser";
+            } else if (command.search("Command Base") != -1){
+                uid = "bl_basemp";
+            } else if (command.search("Turret Base") != -1){
+                uid = "bl_baseaa";
+            } else if (command.search("Sniper Base") != -1){
+                uid = "bl_basesniper";
+            } else if (command.search("Soldier Base") != -1){
+                uid = "bl_baserifle";
+            } else if (command.search("Soldier") != -1){
+                uid = "bl_rifle";
+            } else if (command.search("Anti-Vehicle Infantry") != -1){
+                uid = "bl_atinfantry";
+            } else if (command.search("Attack Trooper") != -1){
+                uid = "bl_assault";
+            } else if (command.search("Stationary Gunner") != -1){
+                uid = "bl_hmg";
+            } else if (command.search("Photon Trooper") != -1){
+                uid = "bl_laserrifle";
+            } else if (command.search("Sniper") != -1){
+                uid = "bl_sniper";
+            } else if (command.search("Mechanic") != -1){
+                uid = "bl_engineerA";
+                uid2 = "bl_engineerB";
+            } else if (command.search("Heavy Infantry") != -1){
+                uid = "bl_closequarter";
+            } else if (command.search("Heavy Mortar") != -1){
+                uid = "bl_howizter";
+            } else if (command.search("Pyroblaster") != -1){
+                uid = "bl_flamer";
+            } else if (command.search("Mecha-Soldier") != -1){
+                uid = "bl_mechasoldierA";
+                uid2 = "bl_mechasoldierB";
+            } else if (command.search("Attack Truck") != -1){
+                uid = "bl_mgtruck";
+            } else if (command.search("Anti-Air Truck") != -1){
+                uid = "bl_aatruck";
+            } else if (command.search("Hover Truck") != -1){
+                uid = "bl_hovertruckA";
+                uid2 = "bl_hovertruckB";
+            } else if (command.search("Motorcycle") != -1){
+                uid = "bl_bike";
+            } else if (command.search("Cannon Truck") != -1){
+                uid = "bl_attruck";
+            } else if (command.search("Sidecar") != -1){
+                uid = "bl_trike";
+            } else if (command.search("Ambulance") != -1){
+                uid = "bl_medictruck";
+            } else if (command.search("Mine Layer") != -1){
+                uid = "bl_minelayerA";
+                uid2 = "bl_minelayerB";
+            } else if (command.search("Tempest") != -1){
+                uid = "bl_railguntruck";
+            } else if (command.search("Standard Tank") != -1){
+                uid = "bl_tank";
+            } else if (command.search("Artillery Tank") != -1){
+                uid = "bl_artillery";
+            } else if (command.search("Shredder") != -1){
+                uid = "bl_shredder";
+            } else if (command.search("Anti-Air Tank") != -1){
+                uid = "bl_aatank";
+            } else if (command.search("Heavy Tank") != -1){
+                uid = "bl_heavytank";
+            } else if (command.search("Mini-Tank") != -1){
+                uid = "bl_minitank";
+            } else if (command.search("Rocket Artillery Tank") != -1){
+                uid = "bl_rocketart";
+            } else if (command.search("Dual-Tech Tank") != -1){
+                uid = "bl_commstankA";
+                uid2 = "bl_commstankB";
+            } else if (command.search("Soundwave Tank") != -1){
+                uid = "bl_sonictank";
+            } else if (command.search("Missile Defense") != -1){
+                uid = "bl_missiledef";
+            } else if (command.search("Command Tank") != -1){
+                uid = "bl_commandtank";
+            } else if (command.search("Laser Tank") != -1){
+                uid = "bl_lasertank";
+            } else if (command.search("Rocket Copter") != -1){
+                uid = "bl_apache";
+            } else if (command.search("Intercopter") != -1){
+                uid = "bl_interceptorA";
+                uid2 = "bl_interceptorB";
+            } else if (command.search("Drone") != -1){
+                uid = "bl_drone";
+            } else if (command.search("Bomb Balloon") != -1){
+                uid = "bl_balloon";
+            } else if (command.search("Hunter") != -1){
+                uid = "bl_jetA";
+                uid2 = "bl_jetB";
+            } else if (command.search("Fire Bomber") != -1){
+                uid = "bl_firebomberA";
+            } else if (command.search("Mini Tank Transporter") != -1){
+                uid = "bl_transport";
+            } else if (command.search("Doomsky") != -1){
+                uid = "bl_stealthbomber";
+            } else if (command.search("Base") != -1){
+                uid = "bl_base";       
+            }
+            //======================== end of republic minis ========================\\
+
             // after getting the uid, get the data
             lvl = parseInt(command.slice(command.length-2)); 
             var dmgOffset = (lvl-1) * attacks[uid].damagePerLvl; 
@@ -206,7 +311,7 @@ client.on("message", (message) => {
                     }
                     attack2 = "\nAttack Type 2:\t\t\t\t"+attackType2+"\nDamage:   \t\t\t\t\t"+(attacks[uid2].damage+dmgOffset2)+"\nAim Time: \t\t\t\t\t"+attacks[uid2].aimTime/1000+"s\nFire Time:\t\t\t\t\t"+attacks[uid2].fireTime/1000+"s\nRange:\t\t\t\t\t\tfrom "+attacks[uid2]["range"].min/10+"m to "+attacks[uid2]["range"].max/10+"m"+"\nSpread: \t\t\t\t\t  from "+attacks[uid2]["spread"].min/10+"m to "+attacks[uid2]["spread"].max/10+"m"+"\nRadius:   \t\t\t\t\t"+attacks[uid2].radius/10+"m\nDamage vs Light Infantry: \t"+attacks[uid2].atk_infantry+"%\n"+"Damage vs Heavy Infantry: \t"+attacks[uid2].atk_heavy+"%\n"+"Damage vs Trucks: \t\t\t"+attacks[uid2].atk_truck+"%\n"+"Damage vs Tanks:  \t\t\t"+attacks[uid2].atk_tank+"%\n"+"Damage vs Helicopters:\t\t"+attacks[uid2].atk_heli+"%\n"+"Damage vs Planes: \t\t\t"+attacks[uid2].atk_plane+"%\n"+"Damage vs Bunkers and Base:   "+attacks[uid2].atk_base+"%\n";
                 }
-                //message.channel.send(targPrio);
+                message.channel.send(numTargetPriority[3][1]);
                 message.channel.send("```============ "+faction+name+" level "+lvl+ " ============ \nAttack Type:  \t\t\t\t"+attackType+"\nDamage:   \t\t\t\t\t"+(attacks[uid].damage+dmgOffset)+"\nAim Time: \t\t\t\t\t"+attacks[uid].aimTime/1000+"s\nFire Time:\t\t\t\t\t"+attacks[uid].fireTime/1000+"s\nRange:\t\t\t\t\t\tfrom "+attacks[uid]["range"].min/10+"m to "+attacks[uid]["range"].max/10+"m"+"\nSpread: \t\t\t\t\t  from "+attacks[uid]["spread"].min/10+"m to "+attacks[uid]["spread"].max/10+"m"+"\nRadius:   \t\t\t\t\t"+attacks[uid].radius/10+"m\nDamage vs Light Infantry: \t"+attacks[uid].atk_infantry+"%\n"+"Damage vs Heavy Infantry: \t"+attacks[uid].atk_heavy+"%\n"+"Damage vs Trucks: \t\t\t"+attacks[uid].atk_truck+"%\n"+"Damage vs Tanks:  \t\t\t"+attacks[uid].atk_tank+"%\n"+"Damage vs Helicopters:\t\t"+attacks[uid].atk_heli+"%\n"+"Damage vs Planes: \t\t\t"+attacks[uid].atk_plane+"%\n"+"Damage vs Bunkers and Base:   "+attacks[uid].atk_base+"%\n"+attack2+"```" );
                 
             }
