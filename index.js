@@ -269,9 +269,7 @@ client.on("message", (message) => {
 
             // after getting the uid, get the data
             lvl = parseInt(command.slice(command.length-2)); 
-            var dmgOffset = (lvl-1) * attacks[uid].damagePerLvl; 
-            if(uid2 !== "null")
-                var dmgOffset2 = (lvl-1) * attacks[uid2].damagePerLvl; 
+           
             // get title
             let faction = "null";
             if(uid.startsWith("bl"))
@@ -325,6 +323,8 @@ client.on("message", (message) => {
             var defaultuid = "null";
 
             if(!isNaN(lvl) && uid !== "null"){
+                var dmgOffset = (lvl-1) * attacks[uid].damagePerLvl; 
+                    
                 var attackType = "";
                 if(attacks[uid].isHealing)
                     attackType = "Healing";
@@ -332,6 +332,7 @@ client.on("message", (message) => {
                     attackType = attacks[uid].type;
                 var attack2 = "";
                 if(uid2 !== "null"){
+                    var dmgOffset2 = (lvl-1) * attacks[uid2].damagePerLvl; 
                     // cut of the A or B of uid for the hp
                     
                     defaultuid = uid.substring(0,uid.length-1);
