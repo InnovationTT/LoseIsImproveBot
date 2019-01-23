@@ -324,11 +324,11 @@ client.on("message", (message) => {
             var basehp = 1500, totalhp = 0, overtimehp = 0, hpgrowth = 0, pplane_dmg = attacks["bk_bomber"].damage*attacks["bk_bomber"].atk_base/100, bomber_dmg = attacks["bl_bomber"].damage*attacks["bl_bomber"].atk_base/100;
             var pplane_dmggrowth = attacks["bk_bomber"].damagePerLvl, bomber_dmggrowth = attacks["bk_bomber"].damagePerLvl, minBomberlvl = 0, minPPlanelvl = 0;
             lvl = parseInt(command.slice(command.length-2)); 
-            if (command.search("common" != -1)){
+            if (command.search("common") != -1){
                 hpgrowth = 75;
-            } else if (command.search("rare" != -1)){
+            } else if (command.search("rare") != -1){
                 hpgrowth = 100;
-            } else if (command.search("epic" != -1)){
+            } else if (command.search("epic") != -1){
                 hpgrowth = 150;
             } else {
                 message.channel.send("Invalid command format. Use: "+prefix+"basebomb [base rarity] [base lvl]");
@@ -343,7 +343,7 @@ client.on("message", (message) => {
             for (let i = bomber_dmg*3; i <= overtimehp; i += bomber_dmggrowth*3*attacks["bl_bomber"].atk_base/100){
                 minBomberlvl++;
             }
-            message.channel.send("lvl: "+lvl+", hpgrowth: "+hpgrowth);
+            //message.channel.send("lvl: "+lvl+", hpgrowth: "+hpgrowth);
             message.channel.send("Your base has a max hp of "+totalhp+". At sudden death, it will be set to "+constants.match_overtime_base_hp_ratio+"% of it's max hp, which is "+overtimehp+".\n"+" Your base will die in one full bombing (all 3 bombs hit) from a lvl "+minPPlanelvl+" Pelican Plane or a lvl "+minBomberlvl+" Bomber.");
         } 
         // ask user to get help if they type nonsense hehexd
