@@ -337,10 +337,10 @@ client.on("message", (message) => {
             totalhp = basehp+(lvl-1)*hpgrowth;
             overtimehp = (constants.match_overtime_base_hp_ratio/100*totalhp);
             // find the required lvl of pelican plane and bomber required to kill base
-            for (let i = pplane_dmg*4; i <= overtimehp; i += pplane_dmggrowth*4*attacks["bk_bomber"].atk_base/100){
+            for (let i = pplane_dmg*4; i < overtimehp; i += pplane_dmggrowth*4*attacks["bk_bomber"].atk_base/100){
                 minPPlanelvl++;
             }
-            for (let i = bomber_dmg*4; i <= overtimehp; i += bomber_dmggrowth*4*attacks["bl_bomber"].atk_base/100){
+            for (let i = bomber_dmg*4; i < overtimehp; i += bomber_dmggrowth*4*attacks["bl_bomber"].atk_base/100){
                 minBomberlvl++;
             }
             //message.channel.send("lvl: "+lvl+", hpgrowth: "+hpgrowth);
