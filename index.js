@@ -339,7 +339,7 @@ client.on("message", (message) => {
 
                 // cut of the A or B of uid for the hp
                 let defaultuid = "null";
-                if(uid2 !== ""){
+                if(uid2 == ""){
                     defaultuid = uid.substring(0,uid.length-2);
                 }
                 var hpOffset = entities[defaultuid].hpPerLvl*(lvl-1);
