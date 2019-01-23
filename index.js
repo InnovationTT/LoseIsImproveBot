@@ -335,7 +335,7 @@ client.on("message", (message) => {
             }
             // calculate max hp and sudden death hp
             totalhp = (basehp+lvl*hpgrowth);
-            overtimehp = (match_overtime_base_hp_ratio/100*totalhp);
+            overtimehp = (constants.match_overtime_base_hp_ratio/100*totalhp);
             // find the required lvl of pelican plane and bomber required to kill base
             for (let i = pplane_dmg*4; i <= overtimehp; i += pplane_dmggrowth*4){
                 minPPlanelvl++;
