@@ -4,22 +4,23 @@ var client = new discord.Client();
 const token = process.env.token;
 
 // the prefix for commanding the bot e.g. "lii! advice"
-const prefix = "!lii ";
+const prefix = "!";
 
 // read json files
 const fs = require("fs");
 var attacks = require("./attacks.json");
 var cards = require("./cards.json");
+var constants = require("./constants.json");
 var type, aimTime, fireTime, reloadTime, clip, rangeMin, rangeMax, damage, radius;
 var lvl;  // modifier per lvl
 var numTargetPriority = [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6]];
 var targetPriority = ["Light Infantry", "Heavy Infantry", "Trucks", "Tanks", "Helicopters", "Planes", "Bunker and Bases"];
 var targPrio = "Target Priority: ";
 var uid = "null", uid2 = "";
-
+var lastUpdate = "2019/01/22";
 client.on("ready", () => {
     console.log("ready");
-    client.user.setActivity("with pepegas");
+    client.user.setActivity("last updated 2019/01/22");
 });
 
 client.on("message", (message) => {
@@ -318,6 +319,32 @@ client.on("message", (message) => {
             }
         } 
         //===========================================================================//
+        // command to check if ur base will die
+        else if (command.startsWith("basebomb")){
+            var basehp = 1500, totalhp = 0, overtimehp = 0, hpgrowth = 0, pplane_dmg = attacks["bk_bomber"].damage*attacks["bk_bomber"].atk_base/100, bomber_dmg = attacks["bl_bomber"].damage*attacks["bl_bomber"].atk_base/100;
+            var pplane_dmggrowth = attacks["bk_bomber"].damagePerLvl, bomber_dmggrowth = attacks["bk_bomber"].damagePerLvl, minBomberlvl = 0, minPPlanelvl = 0;
+            lvl = parseInt(command.slice(command.length-2)); 
+            if (command.search("common" != -1)){
+                hpgrowth = 75;
+            } else if (command.search("rare" != -1)){
+                hpgrowth = 100;
+            } else if (command.search("epic" != -1)){
+                hpgrowth = 150;
+            } else {
+                message.channel.send("Invalid command format. Use: "+prefix+"basebomb [base rarity] [base lvl]");
+            }
+            // calculate max hp and sudden death hp
+            totalhp = (basehp+lvl*hpgrowth);
+            overtimehp = (match_overtime_base_hp_ratio/100*totalhp);
+            // find the required lvl of pelican plane and bomber required to kill base
+            for (let i = pplane_dmg*4; i <= overtimehp; i += pplane_dmggrowth*4){
+                minPPlanelvl++;
+            }
+            for (let i = bomber_dmg*4; i <= overtimehp; i += bomber_dmggrowth*4){
+                minBomberlvl++;
+            }
+            message.channel.send("Your base has a max hp of "+totalhp+". At sudden death, it will be set to "+constants.match_overtime_base_hp_ratio+"% of it's max hp, which is "+overtimehp+".\n"+" Your base will die in one full bombing (all 4 bombs hit) from a lvl "+minPPlanelvl+" Pelican Plane or a lvl "+minBomberlvl+" Bomber.");
+        } 
         // ask user to get help if they type nonsense hehexd
         else {
             message.channel.send("That is an unrecognized command. Use command \""+prefix+"help\" for some help xd.")
