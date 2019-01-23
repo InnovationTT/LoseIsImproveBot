@@ -29,7 +29,7 @@ client.on("message", (message) => {
         var command = message.content.slice(prefix.length);
         // help, list the commands
         if(command.startsWith("help")){
-            message.channel.send("```============ Commands ============ \n advice: gives helpful life advice \n lookup (mini name) (level): gets the data on the mini of your choice. (WIP)```");
+            message.channel.send("```============ Commands ============ \n advice: gives helpful life advice \n lookup (mini name) (level): gets the data on the mini of your choice. \n basebomb (base rarity) (base lvl): returns the minimum level of pelican plane and bombers that can kill your base in SD(WIP)```");
         } 
         // gives helpful life advice
         else if (command.startsWith("advice")){
