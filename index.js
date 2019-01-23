@@ -337,13 +337,13 @@ client.on("message", (message) => {
             totalhp = (basehp+lvl*hpgrowth);
             overtimehp = (constants.match_overtime_base_hp_ratio/100*totalhp);
             // find the required lvl of pelican plane and bomber required to kill base
-            for (let i = pplane_dmg*4; i <= overtimehp; i += pplane_dmggrowth*4*attacks["bk_bomber"].atk_base/100){
+            for (let i = pplane_dmg*3; i <= overtimehp; i += pplane_dmggrowth*3*attacks["bk_bomber"].atk_base/100){
                 minPPlanelvl++;
             }
-            for (let i = bomber_dmg*4; i <= overtimehp; i += bomber_dmggrowth*4*attacks["bl_bomber"].atk_base/100){
+            for (let i = bomber_dmg*3; i <= overtimehp; i += bomber_dmggrowth*3*attacks["bl_bomber"].atk_base/100){
                 minBomberlvl++;
             }
-            message.channel.send("Your base has a max hp of "+totalhp+". At sudden death, it will be set to "+constants.match_overtime_base_hp_ratio+"% of it's max hp, which is "+overtimehp+".\n"+" Your base will die in one full bombing (all 4 bombs hit) from a lvl "+minPPlanelvl+" Pelican Plane or a lvl "+minBomberlvl+" Bomber.");
+            message.channel.send("Your base has a max hp of "+totalhp+". At sudden death, it will be set to "+constants.match_overtime_base_hp_ratio+"% of it's max hp, which is "+overtimehp+".\n"+" Your base will die in one full bombing (all 3 bombs hit) from a lvl "+minPPlanelvl+" Pelican Plane or a lvl "+minBomberlvl+" Bomber.");
         } 
         // ask user to get help if they type nonsense hehexd
         else {
