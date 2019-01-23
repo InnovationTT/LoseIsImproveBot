@@ -322,7 +322,7 @@ client.on("message", (message) => {
         // command to check if ur base will die
         else if (command.startsWith("basebomb")){
             var basehp = 1500, totalhp = 0, overtimehp = 0, hpgrowth = 0, pplane_dmg = attacks["bk_bomber"].damage*attacks["bk_bomber"].atk_base/100, bomber_dmg = attacks["bl_bomber"].damage*attacks["bl_bomber"].atk_base/100;
-            var pplane_dmggrowth = attacks["bk_bomber"].damagePerLvl, bomber_dmggrowth = attacks["bl_bomber"].damagePerLvl, minBomberlvl = 0, minPPlanelvl = 0;
+            var pplane_dmggrowth = attacks["bk_bomber"].damagePerLvl, bomber_dmggrowth = attacks["bl_bomber"].damagePerLvl, minBomberlvl = 1, minPPlanelvl = 1;
             lvl = parseInt(command.slice(command.length-2)); 
             if (command.toLowerCase().search("common") != -1){
                 hpgrowth = 75;
