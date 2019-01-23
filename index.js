@@ -4,7 +4,7 @@ var client = new discord.Client();
 const token = process.env.token;
 
 // the prefix for commanding the bot e.g. "lii! advice"
-const prefix = "!lii";
+const prefix = "!lii ";
 
 // read json files
 const fs = require("fs");
