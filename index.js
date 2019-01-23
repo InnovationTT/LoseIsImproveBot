@@ -356,7 +356,7 @@ client.on("message", (message) => {
             }
             // calculate max hp and sudden death hp
             totalhp = basehp+(lvl-1)*hpgrowth;
-            overtimehp = (constants.match_overtime_base_hp_ratio/100*totalhp);
+            overtimehp = Math.floor(constants.match_overtime_base_hp_ratio/100*totalhp);
             // find the required lvl of pelican plane and bomber required to kill base
             for (let i = pplane_dmg*4; i < overtimehp; i += pplane_dmggrowth*4*attacks["bk_bomber"].atk_base/100){
                 minPPlanelvl++;
@@ -365,7 +365,7 @@ client.on("message", (message) => {
                 minBomberlvl++;
             }
             //message.channel.send("lvl: "+lvl+", hpgrowth: "+hpgrowth+"actual dmg growth per lvl: "+(bomber_dmggrowth));
-            message.channel.send("Your base has a max hp of **"+totalhp+"**. At sudden death, it will be set to "+constants.match_overtime_base_hp_ratio+"% of it's max hp, which is "+overtimehp+".\n"+" Your base will die in one full bombing (all 4 bombs hit) from a lvl "+minPPlanelvl+" Pelican Plane or a lvl "+minBomberlvl+" Bomber.");
+            message.channel.send("Your base has a max hp of **"+totalhp+"**. At sudden death, it will be set to **"+constants.match_overtime_base_hp_ratio+"%** of it's max hp, which is **"+overtimehp+"**."+" Your base will die in one full bombing (all 4 bombs hit) from a **lvl "+minPPlanelvl+" Pelican Plane** or a **lvl "+minBomberlvl+" Bomber**.");
         } 
         // ask user to get help if they type nonsense hehexd
         else {
@@ -376,7 +376,7 @@ client.on("message", (message) => {
 
     // if(message.content.startsWith(prefix + "advice")){
     //     message.reply("lose is improve");
-    // }
+    // }        
 
 
     // if(message.content.startsWith(prefix + "lookup")){
