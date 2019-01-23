@@ -11,6 +11,7 @@ const fs = require("fs");
 var attacks = require("./attacks.json");
 var cards = require("./cards.json");
 var constants = require("./constants.json");
+var entities = require("./entities.json");
 var type, aimTime, fireTime, reloadTime, clip, rangeMin, rangeMax, damage, radius;
 var lvl;  // modifier per lvl
 var numTargetPriority = [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6]];
