@@ -343,7 +343,7 @@ client.on("message", (message) => {
             for (let i = bomber_dmg*4; i < overtimehp; i += bomber_dmggrowth*4*attacks["bl_bomber"].atk_base/100){
                 minBomberlvl++;
             }
-            message.channel.send("lvl: "+lvl+", hpgrowth: "+hpgrowth+"actual dmg growth per lvl: "+(bomber_dmggrowth*4*attacks["bl_bomber"].atk_base/100));
+            message.channel.send("lvl: "+lvl+", hpgrowth: "+hpgrowth+"actual dmg growth per lvl: "+(bomber_dmggrowth));
             message.channel.send("Your base has a max hp of "+totalhp+". At sudden death, it will be set to "+constants.match_overtime_base_hp_ratio+"% of it's max hp, which is "+overtimehp+".\n"+" Your base will die in one full bombing (all 4 bombs hit) from a lvl "+minPPlanelvl+" Pelican Plane or a lvl "+minBomberlvl+" Bomber.");
         } 
         // ask user to get help if they type nonsense hehexd
