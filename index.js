@@ -260,7 +260,7 @@ client.on("message", (message) => {
                     skirtresult = "just some plain ole flaps of skin. Nothing to see here";
                 else if (rand < 1)
                     skirtresult = "i ran out of ideas dm or ping me and i might add it lol";
-
+                message.channel.send("rand = "+rand);
                 message.channel.send("You scuttle around like a rat and lookup a random person's skirt. You find... \n"+skirtresult);
             }
 
