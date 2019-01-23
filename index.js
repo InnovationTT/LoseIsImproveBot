@@ -324,23 +324,23 @@ client.on("message", (message) => {
             var basehp = 1500, totalhp = 0, overtimehp = 0, hpgrowth = 0, pplane_dmg = attacks["bk_bomber"].damage*attacks["bk_bomber"].atk_base/100, bomber_dmg = attacks["bl_bomber"].damage*attacks["bl_bomber"].atk_base/100;
             var pplane_dmggrowth = attacks["bk_bomber"].damagePerLvl, bomber_dmggrowth = attacks["bk_bomber"].damagePerLvl, minBomberlvl = 0, minPPlanelvl = 0;
             lvl = parseInt(command.slice(command.length-2)); 
-            if (command.search("common") != -1){
+            if (command.toLowerCase.search("common") != -1){
                 hpgrowth = 75;
-            } else if (command.search("rare") != -1){
+            } else if (command.toLowerCase.search("rare") != -1){
                 hpgrowth = 100;
-            } else if (command.search("epic") != -1){
+            } else if (command.toLowerCase.search("epic") != -1){
                 hpgrowth = 150;
             } else {
-                message.channel.send("Invalid command format. Use: "+prefix+"basebomb [base rarity] [base lvl]");
+                message.channel.send("Invalid command format. Use: "+prefix+"basebomb [base rarity] [base lvl] e.g. "+prefix+"basebomb common 12");
             }
             // calculate max hp and sudden death hp
             totalhp = basehp+(lvl-1)*hpgrowth;
             overtimehp = (constants.match_overtime_base_hp_ratio/100*totalhp);
             // find the required lvl of pelican plane and bomber required to kill base
-            for (let i = pplane_dmg*3; i <= overtimehp; i += pplane_dmggrowth*3*attacks["bk_bomber"].atk_base/100){
+            for (let i = pplane_dmg*4; i <= overtimehp; i += pplane_dmggrowth*4*attacks["bk_bomber"].atk_base/100){
                 minPPlanelvl++;
             }
-            for (let i = bomber_dmg*3; i <= overtimehp; i += bomber_dmggrowth*3*attacks["bl_bomber"].atk_base/100){
+            for (let i = bomber_dmg*4; i <= overtimehp; i += bomber_dmggrowth*4*attacks["bl_bomber"].atk_base/100){
                 minBomberlvl++;
             }
             //message.channel.send("lvl: "+lvl+", hpgrowth: "+hpgrowth);
