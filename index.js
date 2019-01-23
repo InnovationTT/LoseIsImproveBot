@@ -36,7 +36,7 @@ client.on("message", (message) => {
             message.channel.send("lose is improve");
         } 
         // for fargone, who wants to lookup skirts
-        else if (command.toLowerCase().startsWith("lookup skirt") != -1){
+        else if (command.toLowerCase().startsWith("lookup skirt")){
             let rand = Math.random();
             let skirtresult = "null";
 
