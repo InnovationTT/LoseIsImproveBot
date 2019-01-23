@@ -324,7 +324,7 @@ client.on("message", (message) => {
 
             var defaultuid = "null";
 
-            if(uid != "null"){
+            if(!isNan(lvl) && uid != "null"){
                 var attackType = "";
                 if(attacks[uid].isHealing)
                     attackType = "Healing";
