@@ -244,6 +244,26 @@ client.on("message", (message) => {
             } else if (command.search("Bike") != -1){
                 uid = "bl_bike";
             } 
+
+            // for fargone, who wants to lookup skirts
+            else if (command.toLowerCase().search("skirt") != -1){
+                let rand = Math.random();
+                let skirtresult = "null";
+
+                if (rand < 0.2)
+                    skirtresult = "something truly nasty, let's not talk about it";
+                else if (rand < 0.4)
+                    skirtresult = "an onion";
+                else if (rand < 0.6)
+                    skirtresult = "something wonderful - it is truly a blessing that the gates of heaven were open for you to see it";
+                else if (rand < 0.8)
+                    skirtresult = "just some plain ole flaps of skin. Nothing to see here";
+                else if (rand < 1)
+                    skirtresult = "i ran out of ideas dm or ping me and i might add it lol";
+
+                message.channel.send("You scuttle around like a rat and lookup a random person's skirt. You find... \n"+skirtresult);
+            }
+
             // after getting the uid, get the data
             lvl = parseInt(command.slice(command.length-2)); 
             var dmgOffset = (lvl-1) * attacks[uid].damagePerLvl; 
@@ -343,7 +363,7 @@ client.on("message", (message) => {
             for (let i = bomber_dmg*4; i < overtimehp; i += bomber_dmggrowth*4*attacks["bl_bomber"].atk_base/100){
                 minBomberlvl++;
             }
-            message.channel.send("lvl: "+lvl+", hpgrowth: "+hpgrowth+"actual dmg growth per lvl: "+(bomber_dmggrowth));
+            //message.channel.send("lvl: "+lvl+", hpgrowth: "+hpgrowth+"actual dmg growth per lvl: "+(bomber_dmggrowth));
             message.channel.send("Your base has a max hp of "+totalhp+". At sudden death, it will be set to "+constants.match_overtime_base_hp_ratio+"% of it's max hp, which is "+overtimehp+".\n"+" Your base will die in one full bombing (all 4 bombs hit) from a lvl "+minPPlanelvl+" Pelican Plane or a lvl "+minBomberlvl+" Bomber.");
         } 
         // ask user to get help if they type nonsense hehexd
