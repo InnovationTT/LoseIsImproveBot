@@ -83,8 +83,8 @@ client.on("message", (message) => {
             } else if (command.search("sniper") != -1){
                 uid = "rd_sniper";
             } else if (command.search("engineer") != -1){
-                uid = "rd_engineera";
-                uid2 = "rd_engineerb";
+                uid = "rd_engineerA";
+                uid2 = "rd_engineerB";
             } else if (command.search("heavy infantry") != -1){
                 uid = "rd_closequarter";
             } else if (command.search("heavy mortar") != -1){
@@ -149,8 +149,8 @@ client.on("message", (message) => {
             } else if (command.search("bomb balloon") != -1){
                 uid = "rd_balloon";
             } else if (command.search("hunter") != -1){
-                uid = "rd_jeta";
-                uid2 = "rd_jetb";
+                uid = "rd_jetA";
+                uid2 = "rd_jetB";
             } else if (command.search("fire bomber") != -1){
                 uid = "rd_firebombera";
             } else if (command.search("mini tank transporter") != -1){
@@ -281,13 +281,13 @@ client.on("message", (message) => {
 
             let name = command.substring(6, command.length-2);
             // get targetting priority
-            numTargetPriority[0] = attacks[uid].targ_infantry;
-            numTargetPriority[1] = attacks[uid].targ_heavy;
-            numTargetPriority[2] = attacks[uid].targ_truck;
-            numTargetPriority[3] = attacks[uid].targ_tank;
-            numTargetPriority[4] = attacks[uid].targ_heli;
-            numTargetPriority[5] = attacks[uid].targ_plane;
-            numTargetPriority[6] = attacks[uid].targ_base;
+            // numTargetPriority[0] = attacks[uid].targ_infantry;
+            // numTargetPriority[1] = attacks[uid].targ_heavy;
+            // numTargetPriority[2] = attacks[uid].targ_truck;
+            // numTargetPriority[3] = attacks[uid].targ_tank;
+            // numTargetPriority[4] = attacks[uid].targ_heli;
+            // numTargetPriority[5] = attacks[uid].targ_plane;
+            // numTargetPriority[6] = attacks[uid].targ_base;
            
             // loop through numTargetPriority to get order
             // var max = 0;
