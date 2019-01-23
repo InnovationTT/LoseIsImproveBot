@@ -321,6 +321,9 @@ client.on("message", (message) => {
             // }
             
             // TODO: deal with spawns
+
+            var defaultuid = "null";
+
             if(uid != "null"){
                 var attackType = "";
                 if(attacks[uid].isHealing)
@@ -330,7 +333,7 @@ client.on("message", (message) => {
                 var attack2 = "";
                 if(uid2 !== "null"){
                     // cut of the A or B of uid for the hp
-                    var defaultuid = "null";
+                    
                     defaultuid = uid.substring(0,uid.length-1);
                     if(attacks[uid2].isHealing){
                         attackType2 = "Healing"
