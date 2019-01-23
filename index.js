@@ -35,6 +35,24 @@ client.on("message", (message) => {
         else if (command.startsWith("advice")){
             message.channel.send("lose is improve");
         } 
+        // for fargone, who wants to lookup skirts
+        else if (command.toLowerCase.startsWith("lookup skirt") != -1){
+            let rand = Math.random();
+            let skirtresult = "null";
+
+            if (rand < 0.2)
+                skirtresult = "something truly nasty, let's not talk about it";
+            else if (rand < 0.4)
+                skirtresult = "an onion";
+            else if (rand < 0.6)
+                skirtresult = "something wonderful - it is truly a blessing that the gates of heaven were open for you to see it";
+            else if (rand < 0.8)
+                skirtresult = "just some plain ole flaps of skin. Nothing to see here";
+            else if (rand < 1)
+                skirtresult = "i ran out of ideas dm or ping me and i might add it lol";
+            //message.channel.send("rand = "+rand);
+            message.channel.send("You scuttle around like a rat and lookup a random person's skirt. You find... \n"+skirtresult);
+        }
         // the current main feature of the bot: lookup mini stuff
         //===========================================================================//
         else if (command.startsWith("lookup")){
@@ -245,24 +263,7 @@ client.on("message", (message) => {
                 uid = "bl_bike";
             } 
 
-            // for fargone, who wants to lookup skirts
-            else if (command.toLowerCase().search("skirt") != -1){
-                let rand = Math.random();
-                let skirtresult = "null";
-
-                if (rand < 0.2)
-                    skirtresult = "something truly nasty, let's not talk about it";
-                else if (rand < 0.4)
-                    skirtresult = "an onion";
-                else if (rand < 0.6)
-                    skirtresult = "something wonderful - it is truly a blessing that the gates of heaven were open for you to see it";
-                else if (rand < 0.8)
-                    skirtresult = "just some plain ole flaps of skin. Nothing to see here";
-                else if (rand < 1)
-                    skirtresult = "i ran out of ideas dm or ping me and i might add it lol";
-                message.channel.send("rand = "+rand);
-                message.channel.send("You scuttle around like a rat and lookup a random person's skirt. You find... \n"+skirtresult);
-            }
+            
 
             // after getting the uid, get the data
             lvl = parseInt(command.slice(command.length-2)); 
