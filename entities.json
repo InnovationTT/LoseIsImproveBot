@@ -1630,8 +1630,8 @@
         },
         "figurineScale": 1,
         "mass": 10,
-        "hp": 150,
-        "hpPerLvl": 15,
+        "hp": 200,
+        "hpPerLvl": 20,
         "speed": 30,
         "runSpeed": 100,
         "fallSpeed": 0,
@@ -1693,7 +1693,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "beaf4432b380d3019416c89df530f5d5"
+        "hash": "daf35161d7a79206983211b34d51d2bc"
     },
     "bl_engineerMissionAir": {
         "uid": "bl_engineerMissionAir",
@@ -2379,7 +2379,7 @@
         "mass": 1000,
         "hp": 500,
         "hpPerLvl": 25,
-        "speed": 55,
+        "speed": 120,
         "runSpeed": 120,
         "fallSpeed": 0,
         "accel": 100,
@@ -2434,7 +2434,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "93daee5a5ce34c82552a94ea0da119f4"
+        "hash": "eab1da24e506c2206934cfd35b7b6251"
     },
     "bl_mgtruckMission": {
         "uid": "bl_mgtruckMission",
@@ -2622,8 +2622,8 @@
         "mass": 100,
         "hp": 200,
         "hpPerLvl": 10,
-        "speed": 120,
-        "runSpeed": 180,
+        "speed": 150,
+        "runSpeed": 200,
         "fallSpeed": 0,
         "accel": 100,
         "decel": 300,
@@ -2677,7 +2677,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "fb16688798e4a63b652ca7d36fb7e7d9"
+        "hash": "efec92212963fe7759bdd8606049e505"
     },
     "bl_bikeMission": {
         "uid": "bl_bikeMission",
@@ -2865,8 +2865,8 @@
         "mass": 100,
         "hp": 250,
         "hpPerLvl": 15,
-        "speed": 100,
-        "runSpeed": 150,
+        "speed": 120,
+        "runSpeed": 180,
         "fallSpeed": 0,
         "accel": 100,
         "decel": 300,
@@ -2920,7 +2920,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "5b705ff21c66830f09c64e731cfd51e9"
+        "hash": "4be1d6bf0cbc196f983c24e552112dd2"
     },
     "bl_apc": {
         "uid": "bl_apc",
@@ -3031,8 +3031,8 @@
         },
         "figurineScale": 2,
         "mass": 10000,
-        "hp": 1600,
-        "hpPerLvl": 80,
+        "hp": 1700,
+        "hpPerLvl": 85,
         "speed": 30,
         "runSpeed": 75,
         "fallSpeed": 0,
@@ -3088,7 +3088,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "5afdfb688a8c8fa3aa6b903e0d27a506"
+        "hash": "ecd6b48f08cd0763fd8d3035b07238f2"
     },
     "bl_artillery": {
         "uid": "bl_artillery",
@@ -3436,8 +3436,8 @@
         },
         "figurineScale": 3,
         "mass": 10000,
-        "hp": 1800,
-        "hpPerLvl": 120,
+        "hp": 1600,
+        "hpPerLvl": 105,
         "speed": 20,
         "runSpeed": 65,
         "fallSpeed": 0,
@@ -3499,7 +3499,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "14f3a20c15aae3fc3beefc339a95964e"
+        "hash": "015660de699412c6276d6d9759e4caa7"
     },
     "bl_sonictank": {
         "uid": "bl_sonictank",
@@ -3604,8 +3604,8 @@
         },
         "figurineScale": 3,
         "mass": 10000,
-        "hp": 2000,
-        "hpPerLvl": 200,
+        "hp": 2200,
+        "hpPerLvl": 220,
         "speed": 25,
         "runSpeed": 75,
         "fallSpeed": 0,
@@ -3661,7 +3661,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "61d4381da5583eae22aeaf94949e0219"
+        "hash": "e27df945c4a1178001cdc44d657210cf"
     },
     "bl_heli": {
         "uid": "bl_heli",
@@ -5610,8 +5610,8 @@
         },
         "figurineScale": 1,
         "mass": 10,
-        "hp": 150,
-        "hpPerLvl": 15,
+        "hp": 200,
+        "hpPerLvl": 20,
         "speed": 30,
         "runSpeed": 100,
         "fallSpeed": 0,
@@ -5673,7 +5673,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "beaf4432b380d3019416c89df530f5d5"
+        "hash": "daf35161d7a79206983211b34d51d2bc"
     },
     "rd_engineerMission": {
         "uid": "rd_engineerMission",
@@ -6116,7 +6116,7 @@
         "mass": 1000,
         "hp": 500,
         "hpPerLvl": 25,
-        "speed": 55,
+        "speed": 120,
         "runSpeed": 120,
         "fallSpeed": 0,
         "accel": 100,
@@ -6171,7 +6171,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "93daee5a5ce34c82552a94ea0da119f4"
+        "hash": "eab1da24e506c2206934cfd35b7b6251"
     },
     "rd_aatruck": {
         "uid": "rd_aatruck",
@@ -6365,8 +6365,8 @@
         "mass": 100,
         "hp": 200,
         "hpPerLvl": 10,
-        "speed": 120,
-        "runSpeed": 180,
+        "speed": 150,
+        "runSpeed": 200,
         "fallSpeed": 0,
         "accel": 100,
         "decel": 300,
@@ -6420,7 +6420,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "fb16688798e4a63b652ca7d36fb7e7d9"
+        "hash": "efec92212963fe7759bdd8606049e505"
     },
     "rd_attruck": {
         "uid": "rd_attruck",
@@ -6527,8 +6527,8 @@
         "mass": 100,
         "hp": 250,
         "hpPerLvl": 15,
-        "speed": 100,
-        "runSpeed": 150,
+        "speed": 120,
+        "runSpeed": 180,
         "fallSpeed": 0,
         "accel": 100,
         "decel": 300,
@@ -6582,7 +6582,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "5b705ff21c66830f09c64e731cfd51e9"
+        "hash": "4be1d6bf0cbc196f983c24e552112dd2"
     },
     "rd_medictruck": {
         "uid": "rd_medictruck",
@@ -6855,8 +6855,8 @@
         },
         "figurineScale": 2,
         "mass": 10000,
-        "hp": 1920,
-        "hpPerLvl": 96,
+        "hp": 2040,
+        "hpPerLvl": 102,
         "speed": 30,
         "runSpeed": 75,
         "fallSpeed": 0,
@@ -6912,7 +6912,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "5afdfb688a8c8fa3aa6b903e0d27a506"
+        "hash": "ecd6b48f08cd0763fd8d3035b07238f2"
     },
     "rd_artillery": {
         "uid": "rd_artillery",
@@ -7179,8 +7179,8 @@
         },
         "figurineScale": 3,
         "mass": 50000,
-        "hp": 3300,
-        "hpPerLvl": 330,
+        "hp": 3600,
+        "hpPerLvl": 360,
         "speed": 20,
         "runSpeed": 20,
         "fallSpeed": 0,
@@ -7236,7 +7236,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "6c0b0ed2d2227cd97123ada65a01f51e"
+        "hash": "249322c84146b20b46fc950fda41885c"
     },
     "rd_minitank": {
         "uid": "rd_minitank",
@@ -7422,8 +7422,8 @@
         },
         "figurineScale": 3,
         "mass": 10000,
-        "hp": 2160,
-        "hpPerLvl": 144,
+        "hp": 1920,
+        "hpPerLvl": 126,
         "speed": 20,
         "runSpeed": 65,
         "fallSpeed": 0,
@@ -7485,7 +7485,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "14f3a20c15aae3fc3beefc339a95964e"
+        "hash": "015660de699412c6276d6d9759e4caa7"
     },
     "rd_sonictank": {
         "uid": "rd_sonictank",
@@ -7671,8 +7671,8 @@
         },
         "figurineScale": 3,
         "mass": 10000,
-        "hp": 1800,
-        "hpPerLvl": 180,
+        "hp": 1920,
+        "hpPerLvl": 192,
         "speed": 20,
         "runSpeed": 65,
         "fallSpeed": 0,
@@ -7735,7 +7735,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "f35d87fc5ab87e996dafede824402914"
+        "hash": "c38fcdf00757622cfe1c4c5d516370a9"
     },
     "rd_lasertank": {
         "uid": "rd_lasertank",
@@ -7759,8 +7759,8 @@
         },
         "figurineScale": 2,
         "mass": 10000,
-        "hp": 1800,
-        "hpPerLvl": 360,
+        "hp": 1920,
+        "hpPerLvl": 384,
         "speed": 20,
         "runSpeed": 65,
         "fallSpeed": 0,
@@ -7816,7 +7816,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "43382719df4493a0d351eac7c8722a40"
+        "hash": "35d3ae2f57742c896b44190268016c01"
     },
     "rd_apache": {
         "uid": "rd_apache",
@@ -8494,8 +8494,8 @@
         },
         "figurineScale": 2,
         "mass": 1000,
-        "hp": 200,
-        "hpPerLvl": 40,
+        "hp": 250,
+        "hpPerLvl": 50,
         "speed": 200,
         "runSpeed": 200,
         "fallSpeed": 0,
@@ -10498,7 +10498,7 @@
         "mass": 1000,
         "hp": 500,
         "hpPerLvl": 25,
-        "speed": 55,
+        "speed": 120,
         "runSpeed": 120,
         "fallSpeed": 0,
         "accel": 100,
@@ -10553,7 +10553,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "93daee5a5ce34c82552a94ea0da119f4"
+        "hash": "eab1da24e506c2206934cfd35b7b6251"
     },
     "bk_aatruck": {
         "uid": "bk_aatruck",
@@ -10660,8 +10660,8 @@
         "mass": 100,
         "hp": 200,
         "hpPerLvl": 10,
-        "speed": 120,
-        "runSpeed": 180,
+        "speed": 150,
+        "runSpeed": 200,
         "fallSpeed": 0,
         "accel": 100,
         "decel": 300,
@@ -10715,7 +10715,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "fb16688798e4a63b652ca7d36fb7e7d9"
+        "hash": "efec92212963fe7759bdd8606049e505"
     },
     "bk_attruck": {
         "uid": "bk_attruck",
@@ -10822,8 +10822,8 @@
         "mass": 100,
         "hp": 250,
         "hpPerLvl": 15,
-        "speed": 100,
-        "runSpeed": 150,
+        "speed": 120,
+        "runSpeed": 180,
         "fallSpeed": 0,
         "accel": 100,
         "decel": 300,
@@ -10877,7 +10877,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "5b705ff21c66830f09c64e731cfd51e9"
+        "hash": "4be1d6bf0cbc196f983c24e552112dd2"
     },
     "bk_medictruck": {
         "uid": "bk_medictruck",
@@ -11213,7 +11213,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "5afdfb688a8c8fa3aa6b903e0d27a506"
+        "hash": "ecd6b48f08cd0763fd8d3035b07238f2"
     },
     "bk_artillery": {
         "uid": "bk_artillery",
@@ -11237,8 +11237,8 @@
         },
         "figurineScale": 2,
         "mass": 10000,
-        "hp": 595,
-        "hpPerLvl": 30,
+        "hp": 560,
+        "hpPerLvl": 28,
         "speed": 20,
         "runSpeed": 20,
         "fallSpeed": 0,
@@ -11318,8 +11318,8 @@
         },
         "figurineScale": 2,
         "mass": 10000,
-        "hp": 680,
-        "hpPerLvl": 34,
+        "hp": 640,
+        "hpPerLvl": 32,
         "speed": 20,
         "runSpeed": 65,
         "fallSpeed": 0,
@@ -11399,8 +11399,8 @@
         },
         "figurineScale": 3,
         "mass": 50000,
-        "hp": 2338,
-        "hpPerLvl": 234,
+        "hp": 2550,
+        "hpPerLvl": 255,
         "speed": 20,
         "runSpeed": 20,
         "fallSpeed": 0,
@@ -11456,7 +11456,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "6c0b0ed2d2227cd97123ada65a01f51e"
+        "hash": "249322c84146b20b46fc950fda41885c"
     },
     "bk_rocketart": {
         "uid": "bk_rocketart",
@@ -11480,8 +11480,8 @@
         },
         "figurineScale": 3,
         "mass": 10000,
-        "hp": 765,
-        "hpPerLvl": 51,
+        "hp": 720,
+        "hpPerLvl": 48,
         "speed": 20,
         "runSpeed": 20,
         "fallSpeed": 0,
@@ -11561,8 +11561,8 @@
         },
         "figurineScale": 3,
         "mass": 10000,
-        "hp": 1530,
-        "hpPerLvl": 102,
+        "hp": 1280,
+        "hpPerLvl": 84,
         "speed": 20,
         "runSpeed": 65,
         "fallSpeed": 0,
@@ -11624,7 +11624,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "14f3a20c15aae3fc3beefc339a95964e"
+        "hash": "015660de699412c6276d6d9759e4caa7"
     },
     "bk_flametank": {
         "uid": "bk_flametank",
@@ -11648,8 +11648,8 @@
         },
         "figurineScale": 3,
         "mass": 10000,
-        "hp": 1445,
-        "hpPerLvl": 145,
+        "hp": 1615,
+        "hpPerLvl": 162,
         "speed": 20,
         "runSpeed": 65,
         "fallSpeed": 0,
@@ -11705,7 +11705,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "9cb7d25f5395fafcc7938b97ab5baa0f"
+        "hash": "eefef7e1717db907cb527bc0ca63e8d3"
     },
     "bk_missiledef": {
         "uid": "bk_missiledef",
@@ -12227,8 +12227,8 @@
         },
         "figurineScale": 2,
         "mass": 1000,
-        "hp": 805,
-        "hpPerLvl": 52,
+        "hp": 840,
+        "hpPerLvl": 54,
         "speed": 145,
         "runSpeed": 145,
         "fallSpeed": 0,
@@ -12308,8 +12308,8 @@
         },
         "figurineScale": 2,
         "mass": 1000,
-        "hp": 805,
-        "hpPerLvl": 52,
+        "hp": 840,
+        "hpPerLvl": 54,
         "speed": 175,
         "runSpeed": 175,
         "fallSpeed": 0,
@@ -16116,7 +16116,7 @@
         "mass": 2500,
         "hp": 0,
         "hpPerLvl": 0,
-        "speed": 280,
+        "speed": 250,
         "runSpeed": 0,
         "fallSpeed": 0,
         "accel": 0,
@@ -16170,7 +16170,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "bb29c1ca580e48739e11d9ed64f91c4b"
+        "hash": "9ace16af65170804bf4707b7088b4a65"
     },
     "rd_rocketart_p": {
         "uid": "rd_rocketart_p",
@@ -16192,7 +16192,7 @@
         "mass": 2500,
         "hp": 0,
         "hpPerLvl": 0,
-        "speed": 280,
+        "speed": 250,
         "runSpeed": 0,
         "fallSpeed": 0,
         "accel": 0,
@@ -16246,7 +16246,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "bb29c1ca580e48739e11d9ed64f91c4b"
+        "hash": "9ace16af65170804bf4707b7088b4a65"
     },
     "bk_rocketart_p": {
         "uid": "bk_rocketart_p",
@@ -16268,7 +16268,7 @@
         "mass": 2500,
         "hp": 0,
         "hpPerLvl": 0,
-        "speed": 280,
+        "speed": 250,
         "runSpeed": 0,
         "fallSpeed": 0,
         "accel": 0,
@@ -16322,7 +16322,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "bb29c1ca580e48739e11d9ed64f91c4b"
+        "hash": "9ace16af65170804bf4707b7088b4a65"
     },
     "bl_commstankA_p": {
         "uid": "bl_commstankA_p",
