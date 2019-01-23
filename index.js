@@ -342,7 +342,7 @@ client.on("message", (message) => {
                 if(uid2 == ""){
                     defaultuid = uid.substring(0,uid.length-1);
                 }
-                var hpOffset = entities[defaultuid].hpPerLvl*(lvl-1);
+                //var hpOffset = entities[defaultuid].hpPerLvl*(lvl-1);
                 message.channel.send(defaultuid);
                 //message.channel.send("```============ "+faction+name+" level "+lvl+ " ============ \nHealth Points: \t\t\t\t"+(cards[defaultuid].hp+hpOffset)+"Attack Type:  \t\t\t\t"+attackType+"\nDamage:   \t\t\t\t\t"+(attacks[uid].damage+dmgOffset)+"\nAim Time: \t\t\t\t\t"+attacks[uid].aimTime/1000+"s\nFire Time:\t\t\t\t\t"+attacks[uid].fireTime/1000+"s\nRange:\t\t\t\t\t\tfrom "+attacks[uid]["range"].min/10+"m to "+attacks[uid]["range"].max/10+"m"+"\nSpread: \t\t\t\t\t  from "+attacks[uid]["spread"].min/10+"m to "+attacks[uid]["spread"].max/10+"m"+"\nRadius:   \t\t\t\t\t"+attacks[uid].radius/10+"m\nDamage vs Light Infantry: \t"+attacks[uid].atk_infantry+"%\n"+"Damage vs Heavy Infantry: \t"+attacks[uid].atk_heavy+"%\n"+"Damage vs Trucks: \t\t\t"+attacks[uid].atk_truck+"%\n"+"Damage vs Tanks:  \t\t\t"+attacks[uid].atk_tank+"%\n"+"Damage vs Helicopters:\t\t"+attacks[uid].atk_heli+"%\n"+"Damage vs Planes: \t\t\t"+attacks[uid].atk_plane+"%\n"+"Damage vs Bunkers and Base:   "+attacks[uid].atk_base+"%\n"+attack2+"```" );
                 
