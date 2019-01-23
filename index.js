@@ -334,7 +334,7 @@ client.on("message", (message) => {
                 message.channel.send("Invalid command format. Use: "+prefix+"basebomb [base rarity] [base lvl]");
             }
             // calculate max hp and sudden death hp
-            totalhp = basehp+lvl*hpgrowth;
+            totalhp = basehp+(lvl-1)*hpgrowth;
             overtimehp = (constants.match_overtime_base_hp_ratio/100*totalhp);
             // find the required lvl of pelican plane and bomber required to kill base
             for (let i = pplane_dmg*3; i <= overtimehp; i += pplane_dmggrowth*3*attacks["bk_bomber"].atk_base/100){
