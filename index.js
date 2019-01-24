@@ -17,7 +17,7 @@ var lvl;  // modifier per lvl
 var numTargetPriority = [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6]];
 var targetPriority = ["Light Infantry", "Heavy Infantry", "Trucks", "Tanks", "Helicopters", "Planes", "Bunker and Bases"];
 var targPrio = "Target Priority: ";
-var uid = "null", uid2 = "null";
+
 var lastUpdate = "2019/01/22";
 client.on("ready", () => {
     console.log("ready");
@@ -57,6 +57,7 @@ client.on("message", (message) => {
         // the current main feature of the bot: lookup mini stuff
         //===========================================================================//
         else if (command.startsWith("lookup")){
+            var uid = "null", uid2 = "null";
             command = command.toLowerCase();
             if (command.search("standard base") != -1){
                 uid = "rd_base";       
@@ -203,13 +204,13 @@ client.on("message", (message) => {
                 uid = "bl_attruck";
             } else if (command.search("trike") != -1){
                 uid = "bl_trike";
-            }else if (command.search("apc") != -1 || command.search("a.p.c.") != -1){
+            } else if (command.search("apc") != -1 || command.search("a.p.c.") != -1){
                 uid = "bl_apcA";
                 uid2 = "bl_apcB";
             } else if (command.search("typhoon") != -1){
                 uid = "bl_gunshipA";
                 uid2 = "bl_gunshipB";
-            }else if (command.search("siege tank") != -1){
+            } else if (command.search("siege tank") != -1){
                 uid = "bl_artillery";
             } else if (command.search("helicopter") != -1){
                 uid = "bl_heli";
