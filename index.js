@@ -372,7 +372,6 @@ client.on("message", (message) => {
                 hpgrowth = 150;
             } else {
                 validCommand = false;
-                message.channel.send("Invalid command format. Use: "+prefix+"basebomb [base rarity] [base lvl] e.g. "+prefix+"basebomb common 12");
             }
             // calculate max hp and sudden death hp
             totalhp = basehp+(lvl-1)*hpgrowth;
@@ -387,6 +386,8 @@ client.on("message", (message) => {
             //message.channel.send("lvl: "+lvl+", hpgrowth: "+hpgrowth+"actual dmg growth per lvl: "+(bomber_dmggrowth));
             if (!isNaN(lvl) && validCommand)
                 message.channel.send("Your base has a max hp of **"+totalhp+"**. At sudden death, it will be set to **"+constants.match_overtime_base_hp_ratio+"%** of it's max hp, which is **"+overtimehp+"**."+" Your base will die in one full bombing (all 4 bombs hit) from a **lvl "+minPPlanelvl+" Pelican Plane** or a **lvl "+minBomberlvl+" Bomber**.");
+            else 
+                message.channel.send("Invalid command format. Use: "+prefix+"basebomb [base rarity] [base lvl] e.g. "+prefix+"basebomb common 12");
         } 
         // ask user to get help if they type nonsense hehexd
         else {
