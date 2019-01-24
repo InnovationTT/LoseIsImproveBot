@@ -231,6 +231,7 @@ client.on("message", (message) => {
             } else if (command.search("commando") != -1){
                 uid = "bl_commandoA";
                 uid2 = "bl_commandoB";
+                message.channel.send("wtf");
             } else if (command.search("paratrooper") != -1){
                 uid = "bl_paratrooper";
             } else if (command.search("attack helicopter") != -1){
