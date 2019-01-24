@@ -362,6 +362,7 @@ client.on("message", (message) => {
         else if (command.startsWith("basebomb")){
             var basehp = 1500, totalhp = 0, overtimehp = 0, hpgrowth = 0, pplane_dmg = attacks["bk_bomber"].damage*attacks["bk_bomber"].atk_base/100, bomber_dmg = attacks["bl_bomber"].damage*attacks["bl_bomber"].atk_base/100;
             var pplane_dmggrowth = attacks["bk_bomber"].damagePerLvl, bomber_dmggrowth = attacks["bl_bomber"].damagePerLvl, minBomberlvl = 1, minPPlanelvl = 1;
+            var validCommand = true;
             lvl = parseInt(command.slice(command.length-2)); 
             if (command.toLowerCase().search("common") != -1){
                 hpgrowth = 75;
@@ -370,6 +371,7 @@ client.on("message", (message) => {
             } else if (command.toLowerCase().search("epic") != -1){
                 hpgrowth = 150;
             } else {
+                validCommand = false;
                 message.channel.send("Invalid command format. Use: "+prefix+"basebomb [base rarity] [base lvl] e.g. "+prefix+"basebomb common 12");
             }
             // calculate max hp and sudden death hp
@@ -383,7 +385,8 @@ client.on("message", (message) => {
                 minBomberlvl++;
             }
             //message.channel.send("lvl: "+lvl+", hpgrowth: "+hpgrowth+"actual dmg growth per lvl: "+(bomber_dmggrowth));
-            message.channel.send("Your base has a max hp of **"+totalhp+"**. At sudden death, it will be set to **"+constants.match_overtime_base_hp_ratio+"%** of it's max hp, which is **"+overtimehp+"**."+" Your base will die in one full bombing (all 4 bombs hit) from a **lvl "+minPPlanelvl+" Pelican Plane** or a **lvl "+minBomberlvl+" Bomber**.");
+            if (validCommand)
+                message.channel.send("Your base has a max hp of **"+totalhp+"**. At sudden death, it will be set to **"+constants.match_overtime_base_hp_ratio+"%** of it's max hp, which is **"+overtimehp+"**."+" Your base will die in one full bombing (all 4 bombs hit) from a **lvl "+minPPlanelvl+" Pelican Plane** or a **lvl "+minBomberlvl+" Bomber**.");
         } 
         // ask user to get help if they type nonsense hehexd
         else {
