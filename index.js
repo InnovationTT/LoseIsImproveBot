@@ -450,11 +450,7 @@ client.on("message", (message) => {
                     var spawnedlvl = Math.ceil(lvl*lvlmultiplier);
                     var spawnedmini = "null"
 
-                    if (cards[attacks[uid2]["projectile"].uid].rarity == 0 && cards[defaultuid].rarity == 1){
-                        spawnedlvl = Math.floor(lvl*lvlmultiplier);
-                        message.channel.send("yeet it's a transport heli")
-                    }
-                        
+                   
                     //IMPORTANT NOTE, the following logic may need to be updated if there is a mini that has two different spawns
                     // if(attacks[uid]["projectile"].uid == "bl_rifle" || attacks[uid2]["projectile"].uid == "bl_rifle")
                     //     spawnedmini = "Soldier";
@@ -473,7 +469,10 @@ client.on("message", (message) => {
                     var lvlmultiplier = (4-cards[attacks[uid]["projectile"].uid].rarity)/(4-cards[defaultuid].rarity);
                     var spawnedlvl = Math.ceil(lvl*lvlmultiplier);
                     var spawnedmini = "null"
-
+                    if (cards[attacks[uid]["projectile"].uid].rarity == 0 && cards[defaultuid].rarity == 1){
+                        spawnedlvl = Math.floor(lvl*lvlmultiplier);
+                    }
+                        
                     //IMPORTANT NOTE, the following logic may need to be updated if there is a mini that has two different spawns
                     // if(attacks[uid]["projectile"].uid == "bl_rifle" || attacks[uid2]["projectile"].uid == "bl_rifle")
                     //     spawnedmini = "Soldier";
