@@ -451,7 +451,7 @@ client.on("message", (message) => {
                 if(attacks[uid].type != "spawn")
                     message.channel.send("```============ "+faction+name+" level "+lvl+ " ============ \nAP Cost:  \t\t\t\t\t"+cards[defaultuid].mp+"\nHealth Points:\t\t\t\t"+(entities[defaultuid].hp+hpOffset)+"\n-------------------------------------------------\nAttack Type:  \t\t\t\t"+attackType+"\nDamage:   \t\t\t\t\t"+(attacks[uid].damage+dmgOffset)+"\nClip Size:\t\t\t\t\t"+attacks[uid].clip+"\nAim Time: \t\t\t\t\t"+attacks[uid].aimTime/1000+"s\nFire Time:\t\t\t\t\t"+attacks[uid].fireTime/1000+"s\nReload Time:  \t\t\t\t"+attacks[uid].reloadTime/1000+"s\nRange:\t\t\t\t\t\tfrom "+attacks[uid]["range"].min/10+"m to "+attacks[uid]["range"].max/10+"m"+"\nSpread: \t\t\t\t\t  from "+attacks[uid]["spread"].min/10+"m to "+attacks[uid]["spread"].max/10+"m"+"\nRadius:   \t\t\t\t\t"+attacks[uid].radius/10+"m\n-------------------------------------------------\nDamage vs Light Infantry: \t"+attacks[uid].atk_infantry+"%\n"+"Damage vs Heavy Infantry: \t"+attacks[uid].atk_heavy+"%\n"+"Damage vs Trucks: \t\t\t"+attacks[uid].atk_truck+"%\n"+"Damage vs Tanks:  \t\t\t"+attacks[uid].atk_tank+"%\n"+"Damage vs Helicopters:\t\t"+attacks[uid].atk_heli+"%\n"+"Damage vs Planes: \t\t\t"+attacks[uid].atk_plane+"%\n"+"Damage vs Bunkers and Base:   "+attacks[uid].atk_base+"%\n"+attack2+"```" );
                 else{
-                    var lvlmultiplier = (cards[defaultuid].rarity+1)/(cards[attacks[uid]["projectile"].uid].rarity+1);
+                    var lvlmultiplier = (4-cards[attacks[uid]["projectile"].uid].rarity)/(4-cards[defaultuid].rarity);
                     var spawnedlvl = Math.ceil(lvl*lvlmultiplier);
                     var spawnedmini = "null"
 
