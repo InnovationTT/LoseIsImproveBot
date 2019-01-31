@@ -441,26 +441,26 @@ client.on("message", (message) => {
                         attackType2 = attacks[uid2].type;
                     }
                     attack2 = "\nAttack Type 2:\t\t\t\t"+attackType2+"\nDamage:   \t\t\t\t\t"+(attacks[uid2].damage+dmgOffset2)+"\nClip Size:\t\t\t\t\t"+attacks[uid2].clip+"\nAim Time: \t\t\t\t\t"+attacks[uid2].aimTime/1000+"s\nFire Time:\t\t\t\t\t"+attacks[uid2].fireTime/1000+"s\nReload Time:  \t\t\t\t"+attacks[uid2].reloadTime/1000+"s\nRange:\t\t\t\t\t\tfrom "+attacks[uid2]["range"].min/10+"m to "+attacks[uid2]["range"].max/10+"m"+"\nSpread: \t\t\t\t\t  from "+attacks[uid2]["spread"].min/10+"m to "+attacks[uid2]["spread"].max/10+"m"+"\nRadius:   \t\t\t\t\t"+attacks[uid2].radius/10+"m\n-------------------------------------------------\nDamage vs Light Infantry: \t"+attacks[uid2].atk_infantry+"%\n"+"Damage vs Heavy Infantry: \t"+attacks[uid2].atk_heavy+"%\n"+"Damage vs Trucks: \t\t\t"+attacks[uid2].atk_truck+"%\n"+"Damage vs Tanks:  \t\t\t"+attacks[uid2].atk_tank+"%\n"+"Damage vs Helicopters:\t\t"+attacks[uid2].atk_heli+"%\n"+"Damage vs Planes: \t\t\t"+attacks[uid2].atk_plane+"%\n"+"Damage vs Bunkers and Base:   "+attacks[uid2].atk_base+"%\n";
-                    if(attacks[uid2].type == "spawn"){
-                        var lvlmultiplier = (4-cards[attacks[uid]["projectile"].uid].rarity)/(4-cards[defaultuid].rarity);
-                        var spawnedlvl = Math.ceil(lvl*lvlmultiplier);
-                        var spawnedmini = "null"
-
-                        //IMPORTANT NOTE, the following logic may need to be updated if there is a mini that has two different spawns
-                        // if(attacks[uid]["projectile"].uid == "bl_rifle" || attacks[uid2]["projectile"].uid == "bl_rifle")
-                        //     spawnedmini = "Soldier";
-                        // else if(attacks[uid]["projectile"].uid == "bk_rifle" || attacks[uid2]["projectile"].uid == "bk_rifle")
-                        //     spawnedmini = "Rifleman";
-                        //message.channel.send("lvlmultiplier: "+lvlmultiplier+"spawned uid: "+attacks["bk_glider"]["projectile"].uid);
-                        attack2 = "\nAttack Type 2:  \t\t\t\t"+attackType2+"\nClip Size:\t\t\t\t\t"+attacks[uid2].clip+"\nAim Time: \t\t\t\t\t"+attacks[uid2].aimTime/1000+"s\nFire Time:\t\t\t\t\t"+attacks[uid2].fireTime/1000+"s\nReload Time:  \t\t\t\t"+attacks[uid2].reloadTime/1000+"s\nSpawned Mini lvl: \t\t\t"+spawnedlvl+"\n"+attack2+"```";
-
-                    }
+                    
                 } else {
                     defaultuid = uid;
                 }
-                                
+                if(attacks[uid2].type == "spawn"){
+                    var lvlmultiplier = (4-cards[attacks[uid2]["projectile"].uid].rarity)/(4-cards[defaultuid].rarity);
+                    var spawnedlvl = Math.ceil(lvl*lvlmultiplier);
+                    var spawnedmini = "null"
+
+                    //IMPORTANT NOTE, the following logic may need to be updated if there is a mini that has two different spawns
+                    // if(attacks[uid]["projectile"].uid == "bl_rifle" || attacks[uid2]["projectile"].uid == "bl_rifle")
+                    //     spawnedmini = "Soldier";
+                    // else if(attacks[uid]["projectile"].uid == "bk_rifle" || attacks[uid2]["projectile"].uid == "bk_rifle")
+                    //     spawnedmini = "Rifleman";
+                    //message.channel.send("lvlmultiplier: "+lvlmultiplier+"spawned uid: "+attacks["bk_glider"]["projectile"].uid);
+                    attack2 = "\nAttack Type 2:  \t\t\t\t"+attackType2+"\nClip Size:\t\t\t\t\t"+attacks[uid2].clip+"\nAim Time: \t\t\t\t\t"+attacks[uid2].aimTime/1000+"s\nFire Time:\t\t\t\t\t"+attacks[uid2].fireTime/1000+"s\nReload Time:  \t\t\t\t"+attacks[uid2].reloadTime/1000+"s\nSpawned Mini lvl: \t\t\t"+spawnedlvl+"\n"+attack2+"```";
+
+                }                
                 var hpOffset = entities[defaultuid].hpPerLvl*(lvl-1);
-                message.channel.send("uid: "+uid+", uid2: "+uid2+", defaultuid: "+defaultuid);
+                //message.channel.send("uid: "+uid+", uid2: "+uid2+", defaultuid: "+defaultuid);
                 //message.channel.send("base hp: " +entities[defaultuid].hp+", hpgrowth: "+entities[defaultuid].hpPerLvl);
                 if(attacks[uid].type != "spawn")
                     message.channel.send("```============ "+faction+name+" level "+lvl+ " ============ \nAP Cost:  \t\t\t\t\t"+cards[defaultuid].mp+"\nHealth Points:\t\t\t\t"+(entities[defaultuid].hp+hpOffset)+"\n-------------------------------------------------\nAttack Type:  \t\t\t\t"+attackType+"\nDamage:   \t\t\t\t\t"+(attacks[uid].damage+dmgOffset)+"\nClip Size:\t\t\t\t\t"+attacks[uid].clip+"\nAim Time: \t\t\t\t\t"+attacks[uid].aimTime/1000+"s\nFire Time:\t\t\t\t\t"+attacks[uid].fireTime/1000+"s\nReload Time:  \t\t\t\t"+attacks[uid].reloadTime/1000+"s\nRange:\t\t\t\t\t\tfrom "+attacks[uid]["range"].min/10+"m to "+attacks[uid]["range"].max/10+"m"+"\nSpread: \t\t\t\t\t  from "+attacks[uid]["spread"].min/10+"m to "+attacks[uid]["spread"].max/10+"m"+"\nRadius:   \t\t\t\t\t"+attacks[uid].radius/10+"m\n-------------------------------------------------\nDamage vs Light Infantry: \t"+attacks[uid].atk_infantry+"%\n"+"Damage vs Heavy Infantry: \t"+attacks[uid].atk_heavy+"%\n"+"Damage vs Trucks: \t\t\t"+attacks[uid].atk_truck+"%\n"+"Damage vs Tanks:  \t\t\t"+attacks[uid].atk_tank+"%\n"+"Damage vs Helicopters:\t\t"+attacks[uid].atk_heli+"%\n"+"Damage vs Planes: \t\t\t"+attacks[uid].atk_plane+"%\n"+"Damage vs Bunkers and Base:   "+attacks[uid].atk_base+"%\n"+attack2+"```" );
