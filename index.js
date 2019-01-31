@@ -456,7 +456,7 @@ client.on("message", (message) => {
                     // else if(attacks[uid]["projectile"].uid == "bk_rifle" || attacks[uid2]["projectile"].uid == "bk_rifle")
                     //     spawnedmini = "Rifleman";
                     //message.channel.send("lvlmultiplier: "+lvlmultiplier+"spawned uid: "+attacks["bk_glider"]["projectile"].uid);
-                    attack2 = "\nAttack Type 2:  \t\t\t\t"+attackType2+"\nClip Size:\t\t\t\t\t"+attacks[uid2].clip+"\nAim Time: \t\t\t\t\t"+attacks[uid2].aimTime/1000+"s\nFire Time:\t\t\t\t\t"+attacks[uid2].fireTime/1000+"s\nReload Time:  \t\t\t\t"+attacks[uid2].reloadTime/1000+"s\nSpawned Mini lvl: \t\t\t"+spawnedlvl+"\n"+attack2+"```";
+                    attack2 = "\nAttack Type 2:\t\t\t\t"+attackType2+"\nClip Size:\t\t\t\t\t"+attacks[uid2].clip+"\nAim Time: \t\t\t\t\t"+attacks[uid2].aimTime/1000+"s\nFire Time:\t\t\t\t\t"+attacks[uid2].fireTime/1000+"s\nReload Time:  \t\t\t\t"+attacks[uid2].reloadTime/1000+"s\nSpawned Mini lvl: \t\t\t"+spawnedlvl+"\n";
 
                 }                
                 var hpOffset = entities[defaultuid].hpPerLvl*(lvl-1);
