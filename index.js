@@ -450,6 +450,8 @@ client.on("message", (message) => {
                     var spawnedlvl = Math.ceil(lvl*lvlmultiplier);
                     var spawnedmini = "null"
 
+                    if (cards[attacks[uid2]["projectile"].uid].rarity == 0 && cards[defaultuid].rarity == 1)
+                        spawnedlvl = Math.floor(lvl*lvlmultiplier);
                     //IMPORTANT NOTE, the following logic may need to be updated if there is a mini that has two different spawns
                     // if(attacks[uid]["projectile"].uid == "bl_rifle" || attacks[uid2]["projectile"].uid == "bl_rifle")
                     //     spawnedmini = "Soldier";
