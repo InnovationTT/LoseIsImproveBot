@@ -456,11 +456,11 @@ client.on("message", (message) => {
                     var spawnedmini = "null"
 
                     //IMPORTANT NOTE, the following logic may need to be updated if there is a mini that has two different spawns
-                    if(attacks[uid]["projectile"].uid == "bl_rifle" || attacks[uid2]["projectile"].uid == "bl_rifle")
-                        spawnedmini = "Soldier";
-                    else if(attacks[uid]["projectile"].uid == "bk_rifle" || attacks[uid2]["projectile"].uid == "bk_rifle")
-                        spawnedmini = "Rifleman";
-                    message.channel.send("lvlmultiplier: "+lvlmultiplier);
+                    // if(attacks[uid]["projectile"].uid == "bl_rifle" || attacks[uid2]["projectile"].uid == "bl_rifle")
+                    //     spawnedmini = "Soldier";
+                    // else if(attacks[uid]["projectile"].uid == "bk_rifle" || attacks[uid2]["projectile"].uid == "bk_rifle")
+                    //     spawnedmini = "Rifleman";
+                    message.channel.send("lvlmultiplier: "+lvlmultiplier+"spawned uid: "+attacks["bk_glider"]["projectile"].uid);
                     //message.channel.send("```============ "+faction+name+" level "+lvl+ " ============ \nAP Cost:  \t\t\t\t\t"+cards[defaultuid].mp+"\nHealth Points:\t\t\t\t"+(entities[defaultuid].hp+hpOffset)+"\n-------------------------------------------------\nAttack Type:  \t\t\t\t"+attackType+"\nClip Size:\t\t\t\t\t"+attacks[uid].clip+"\nAim Time: \t\t\t\t\t"+attacks[uid].aimTime/1000+"s\nFire Time:\t\t\t\t\t"+attacks[uid].fireTime/1000+"s\nReload Time:  \t\t\t\t"+attacks[uid].reloadTime/1000+"s\n Spawned Mini lvl:\t\t\t"+spawnedlvl+"\n"+attack2+"```" );
 
                     
