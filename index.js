@@ -14,8 +14,7 @@ var constants = require("./constants.json");
 var entities = require("./entities.json");
 var type, aimTime, fireTime, reloadTime, clip, rangeMin, rangeMax, damage, radius;
 var lvl;  // modifier per lvl
-var numTargetPriority = [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [0, 7]];
-var targetPriority = ["Light Infantry", "Heavy Infantry", "Trucks", "Tanks", "Helicopters", "Planes", "Bunker and Bases"];
+
 var targPrio = "Target Priority: ";
 
 var lastUpdate = "2019/01/22";
@@ -379,6 +378,8 @@ client.on("message", (message) => {
 
             let name = command.substring(6, command.length-2);
             // get targetting priority
+            var numTargetPriority = [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [0, 7]];
+            var targetPriority = ["Light Infantry", "Heavy Infantry", "Trucks", "Tanks", "Helicopters", "Planes", "Bunker and Bases"];
             numTargetPriority[0][0] = attacks[uid].targ_infantry;
             numTargetPriority[1][0] = attacks[uid].targ_heavy;
             numTargetPriority[2][0] = attacks[uid].targ_truck;
