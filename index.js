@@ -402,20 +402,23 @@ client.on("message", (message) => {
             }
             var targetPrioListString = " ";
             for(var i = 0; i < numTargetPriority.length; i++){
-                if(numTargetPriority[i][1] == 1)
-                    targetPrioListString += "Light Infantry, ";
-                else if(numTargetPriority[i][1] == 2)
-                    targetPrioListString += "Heavy Infantry, ";
-                else if(numTargetPriority[i][1] == 3)
-                     targetPrioListString += "Trucks, ";
-                else if(numTargetPriority[i][1] == 4)
-                     targetPrioListString += "Tanks, ";
-                else if(numTargetPriority[i][1] == 5)
-                     targetPrioListString += "Helicopters, ";
-                else if(numTargetPriority[i][1] == 6)
-                     targetPrioListString += "Planes, ";
-                else if(numTargetPriority[i][1] == 7)
-                     targetPrioListString += "Bunkers and Bases, ";
+                if(numTargetPriority[i][0] != 0) {
+                    if(numTargetPriority[i][1] == 1)
+                        targetPrioListString += "Light Infantry, ";
+                    else if(numTargetPriority[i][1] == 2)
+                        targetPrioListString += "Heavy Infantry, ";
+                    else if(numTargetPriority[i][1] == 3)
+                        targetPrioListString += "Trucks, ";
+                    else if(numTargetPriority[i][1] == 4)
+                        targetPrioListString += "Tanks, ";
+                    else if(numTargetPriority[i][1] == 5)
+                        targetPrioListString += "Helicopters, ";
+                    else if(numTargetPriority[i][1] == 6)
+                        targetPrioListString += "Planes, ";
+                    else if(numTargetPriority[i][1] == 7)
+                        targetPrioListString += "Bunkers and Bases, ";
+                }
+                
                 //["Light Infantry", "Heavy Infantry", "Trucks", "Tanks", "Helicopters", "Planes", "Bunker and Bases"];
             }
             message.channel.send("Target Prio List: "+targetPrioListString);
