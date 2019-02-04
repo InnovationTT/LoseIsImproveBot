@@ -1638,7 +1638,7 @@
         "accel": 0,
         "decel": 0,
         "rotation": 360,
-        "vision": 20,
+        "vision": 40,
         "stealth": 0,
         "population": 4,
         "convergeMs": 0,
@@ -1693,7 +1693,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "daf35161d7a79206983211b34d51d2bc"
+        "hash": "d5ed5d4feb8404e9708e67b44faf5ca4"
     },
     "bl_engineerMissionAir": {
         "uid": "bl_engineerMissionAir",
@@ -1918,7 +1918,7 @@
         "flyPasses": 0,
         "minPlaceX": 0,
         "maxPlaceX": 115,
-        "maxInPlay": 0,
+        "maxInPlay": 5,
         "def_infantry": 0,
         "def_heavy": 0,
         "def_truck": 0,
@@ -1948,7 +1948,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "53255325861cde48ac5de7f46602e09d"
+        "hash": "2bf6e2f6d7df7ab0de8992ab7278bf10"
     },
     "bl_aainfantry": {
         "uid": "bl_aainfantry",
@@ -2377,8 +2377,8 @@
         },
         "figurineScale": 2,
         "mass": 1000,
-        "hp": 500,
-        "hpPerLvl": 25,
+        "hp": 600,
+        "hpPerLvl": 30,
         "speed": 120,
         "runSpeed": 120,
         "fallSpeed": 0,
@@ -2434,7 +2434,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "eab1da24e506c2206934cfd35b7b6251"
+        "hash": "3ff8c22009adf5be9872260fb3f128fd"
     },
     "bl_mgtruckMission": {
         "uid": "bl_mgtruckMission",
@@ -2620,8 +2620,8 @@
         },
         "figurineScale": 1,
         "mass": 100,
-        "hp": 200,
-        "hpPerLvl": 10,
+        "hp": 250,
+        "hpPerLvl": 15,
         "speed": 150,
         "runSpeed": 200,
         "fallSpeed": 0,
@@ -2677,7 +2677,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "efec92212963fe7759bdd8606049e505"
+        "hash": "48dec7df213d36b3ed68c04fd2539a22"
     },
     "bl_bikeMission": {
         "uid": "bl_bikeMission",
@@ -4357,8 +4357,8 @@
         },
         "figurineScale": 3,
         "mass": 1000,
-        "hp": 2000,
-        "hpPerLvl": 200,
+        "hp": 1800,
+        "hpPerLvl": 180,
         "speed": 125,
         "runSpeed": 125,
         "fallSpeed": 0,
@@ -4414,7 +4414,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "2df2a3f9a4678e6cc19ac3f6ab985ec2"
+        "hash": "4cba3dbeedac5e4107b617aafbf58229"
     },
     "bl_warthog": {
         "uid": "bl_warthog",
@@ -4438,8 +4438,8 @@
         },
         "figurineScale": 2,
         "mass": 300,
-        "hp": 600,
-        "hpPerLvl": 120,
+        "hp": 900,
+        "hpPerLvl": 180,
         "speed": 200,
         "runSpeed": 200,
         "fallSpeed": 0,
@@ -4501,7 +4501,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "cd712e387d952ba84eb0ba18aa888444"
+        "hash": "02c89d20f585001e0b9f68ab5906a8fd"
     },
     "bl_stealthbomber": {
         "uid": "bl_stealthbomber",
@@ -5618,7 +5618,7 @@
         "accel": 0,
         "decel": 0,
         "rotation": 360,
-        "vision": 20,
+        "vision": 40,
         "stealth": 0,
         "population": 4,
         "convergeMs": 0,
@@ -5673,7 +5673,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "daf35161d7a79206983211b34d51d2bc"
+        "hash": "d5ed5d4feb8404e9708e67b44faf5ca4"
     },
     "rd_engineerMission": {
         "uid": "rd_engineerMission",
@@ -6114,8 +6114,8 @@
         },
         "figurineScale": 2,
         "mass": 1000,
-        "hp": 500,
-        "hpPerLvl": 25,
+        "hp": 600,
+        "hpPerLvl": 30,
         "speed": 120,
         "runSpeed": 120,
         "fallSpeed": 0,
@@ -6171,7 +6171,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "eab1da24e506c2206934cfd35b7b6251"
+        "hash": "3ff8c22009adf5be9872260fb3f128fd"
     },
     "rd_aatruck": {
         "uid": "rd_aatruck",
@@ -6363,8 +6363,8 @@
         },
         "figurineScale": 1,
         "mass": 100,
-        "hp": 200,
-        "hpPerLvl": 10,
+        "hp": 250,
+        "hpPerLvl": 15,
         "speed": 150,
         "runSpeed": 200,
         "fallSpeed": 0,
@@ -6420,7 +6420,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "efec92212963fe7759bdd8606049e505"
+        "hash": "48dec7df213d36b3ed68c04fd2539a22"
     },
     "rd_attruck": {
         "uid": "rd_attruck",
@@ -7590,8 +7590,8 @@
         },
         "figurineScale": 2,
         "mass": 10000,
-        "hp": 1200,
-        "hpPerLvl": 120,
+        "hp": 1800,
+        "hpPerLvl": 180,
         "speed": 20,
         "runSpeed": 20,
         "fallSpeed": 0,
@@ -7599,7 +7599,7 @@
         "decel": 250,
         "rotation": 90,
         "vision": 0,
-        "stealth": 0,
+        "stealth": -40,
         "population": 20,
         "convergeMs": 0,
         "deploys": true,
@@ -7647,7 +7647,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "adf6b869bb1b68e86dd9a67ba9f362ea"
+        "hash": "90820c2107ccd8720612cce2f03ce117"
     },
     "rd_commandtank": {
         "uid": "rd_commandtank",
@@ -8413,8 +8413,8 @@
         },
         "figurineScale": 3,
         "mass": 1000,
-        "hp": 2000,
-        "hpPerLvl": 200,
+        "hp": 1800,
+        "hpPerLvl": 180,
         "speed": 125,
         "runSpeed": 125,
         "fallSpeed": 0,
@@ -8470,7 +8470,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "2df2a3f9a4678e6cc19ac3f6ab985ec2"
+        "hash": "4cba3dbeedac5e4107b617aafbf58229"
     },
     "rd_stealthbomber": {
         "uid": "rd_stealthbomber",
@@ -9507,7 +9507,7 @@
         "accel": 0,
         "decel": 0,
         "rotation": 360,
-        "vision": 20,
+        "vision": 40,
         "stealth": 0,
         "population": 6,
         "convergeMs": 0,
@@ -9562,7 +9562,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "5ee6ba8045dbb4e13b60c0572a8339f0"
+        "hash": "663691ff866edd4783f2890eccd280b3"
     },
     "bk_sniper": {
         "uid": "bk_sniper",
@@ -9869,7 +9869,7 @@
         "flyPasses": 0,
         "minPlaceX": 0,
         "maxPlaceX": 115,
-        "maxInPlay": 0,
+        "maxInPlay": 5,
         "def_infantry": 0,
         "def_heavy": 0,
         "def_truck": 0,
@@ -9899,7 +9899,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "53255325861cde48ac5de7f46602e09d"
+        "hash": "2bf6e2f6d7df7ab0de8992ab7278bf10"
     },
     "bk_aainfantry": {
         "uid": "bk_aainfantry",
@@ -10496,8 +10496,8 @@
         },
         "figurineScale": 2,
         "mass": 1000,
-        "hp": 500,
-        "hpPerLvl": 25,
+        "hp": 600,
+        "hpPerLvl": 30,
         "speed": 120,
         "runSpeed": 120,
         "fallSpeed": 0,
@@ -10553,7 +10553,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "eab1da24e506c2206934cfd35b7b6251"
+        "hash": "3ff8c22009adf5be9872260fb3f128fd"
     },
     "bk_aatruck": {
         "uid": "bk_aatruck",
@@ -10658,8 +10658,8 @@
         },
         "figurineScale": 1,
         "mass": 100,
-        "hp": 200,
-        "hpPerLvl": 10,
+        "hp": 250,
+        "hpPerLvl": 15,
         "speed": 150,
         "runSpeed": 200,
         "fallSpeed": 0,
@@ -10715,7 +10715,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "efec92212963fe7759bdd8606049e505"
+        "hash": "48dec7df213d36b3ed68c04fd2539a22"
     },
     "bk_attruck": {
         "uid": "bk_attruck",
@@ -11729,8 +11729,8 @@
         },
         "figurineScale": 2,
         "mass": 10000,
-        "hp": 1000,
-        "hpPerLvl": 100,
+        "hp": 1500,
+        "hpPerLvl": 150,
         "speed": 20,
         "runSpeed": 20,
         "fallSpeed": 0,
@@ -11738,7 +11738,7 @@
         "decel": 250,
         "rotation": 90,
         "vision": 0,
-        "stealth": 0,
+        "stealth": -40,
         "population": 20,
         "convergeMs": 0,
         "deploys": true,
@@ -11786,7 +11786,7 @@
         "col_plane": 0,
         "col_base": 0,
         "col_projectile": 0,
-        "hash": "adf6b869bb1b68e86dd9a67ba9f362ea"
+        "hash": "90820c2107ccd8720612cce2f03ce117"
     },
     "bk_megatank": {
         "uid": "bk_megatank",

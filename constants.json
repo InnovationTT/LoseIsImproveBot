@@ -157,7 +157,7 @@
     "league_first_silver": 11,
     "league_first_gold": 16,
     "league_first_legendary": 21,
-    "chat_message_max_characters": 300,
+    "chat_message_max_characters": 60,
     "donate_common_gold": 1,
     "donate_rare_gold": 3,
     "donate_epic_gold": 10,

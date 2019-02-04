@@ -1663,21 +1663,21 @@
     "bl_mgtruck": {
         "uid": "bl_mgtruck",
         "type": "direct",
-        "aimTime": 100,
-        "fireTime": 100,
+        "aimTime": 200,
+        "fireTime": 50,
         "reloadTime": 1300,
         "coolTime": 0,
-        "clip": 40,
+        "clip": 50,
         "range": {
             "min": 0,
             "max": 120
         },
         "spread": {
             "min": 0,
-            "max": 20
+            "max": 30
         },
-        "damage": 50,
-        "damagePerLvl": 2,
+        "damage": 30,
+        "damagePerLvl": 1,
         "radius": 0,
         "dmgBonus": 0,
         "dmgBonusCount": 0,
@@ -1716,7 +1716,7 @@
         "atk_plane": 50,
         "atk_base": 25,
         "icon": "bullet",
-        "hash": "67d32a590d1f853e4cafe8bce9f09a54"
+        "hash": "aac80c6f825b8c9fd67d14a65535780a"
     },
     "bl_mgtruckMission": {
         "uid": "bl_mgtruckMission",
@@ -1839,9 +1839,9 @@
         "type": "direct",
         "aimTime": 100,
         "fireTime": 100,
-        "reloadTime": 600,
+        "reloadTime": 400,
         "coolTime": 0,
-        "clip": 20,
+        "clip": 30,
         "range": {
             "min": 0,
             "max": 90
@@ -1850,8 +1850,8 @@
             "min": 0,
             "max": 0
         },
-        "damage": 35,
-        "damagePerLvl": 1,
+        "damage": 45,
+        "damagePerLvl": 2,
         "radius": 0,
         "dmgBonus": 0,
         "dmgBonusCount": 0,
@@ -1890,7 +1890,7 @@
         "atk_plane": 50,
         "atk_base": 5,
         "icon": "bullet",
-        "hash": "9c628c532f1d0286c55ace645ab41268"
+        "hash": "7b82d24e6c2d57fcf1f80373df7bba26"
     },
     "bl_bikeMission": {
         "uid": "bl_bikeMission",
@@ -3529,15 +3529,15 @@
         "coolTime": 600000,
         "clip": 4,
         "range": {
-            "min": 200,
+            "min": 100,
             "max": 400
         },
         "spread": {
             "min": 0,
             "max": 0
         },
-        "damage": 500,
-        "damagePerLvl": 100,
+        "damage": 600,
+        "damagePerLvl": 120,
         "radius": 35,
         "dmgBonus": 0,
         "dmgBonusCount": 0,
@@ -3579,7 +3579,7 @@
         "atk_plane": 100,
         "atk_base": 25,
         "icon": "gun2",
-        "hash": "5109381513beb3dd4f098aea60d98eab"
+        "hash": "0b50bb93bc6ab24fb36bebce5cb4ad28"
     },
     "bl_warthogB": {
         "uid": "bl_warthogB",
@@ -3588,17 +3588,17 @@
         "fireTime": 50,
         "reloadTime": 3300,
         "coolTime": 0,
-        "clip": 100,
+        "clip": 200,
         "range": {
-            "min": 200,
+            "min": 150,
             "max": 400
         },
         "spread": {
             "min": 5,
             "max": 25
         },
-        "damage": 45,
-        "damagePerLvl": 9,
+        "damage": 50,
+        "damagePerLvl": 10,
         "radius": 0,
         "dmgBonus": 0,
         "dmgBonusCount": 0,
@@ -3637,7 +3637,7 @@
         "atk_plane": 50,
         "atk_base": 25,
         "icon": "bullet",
-        "hash": "2057d78b53e39bc2d787c1fe51ba1b95"
+        "hash": "b38e685bcdf0ca8e69b1641a450bedca"
     },
     "bl_stealthbomber": {
         "uid": "bl_stealthbomber",
@@ -5000,21 +5000,21 @@
     "rd_mgtruck": {
         "uid": "rd_mgtruck",
         "type": "direct",
-        "aimTime": 100,
-        "fireTime": 100,
+        "aimTime": 200,
+        "fireTime": 50,
         "reloadTime": 1300,
         "coolTime": 0,
-        "clip": 40,
+        "clip": 50,
         "range": {
             "min": 0,
             "max": 120
         },
         "spread": {
             "min": 0,
-            "max": 20
+            "max": 30
         },
-        "damage": 50,
-        "damagePerLvl": 2,
+        "damage": 30,
+        "damagePerLvl": 1,
         "radius": 0,
         "dmgBonus": 0,
         "dmgBonusCount": 0,
@@ -5053,7 +5053,7 @@
         "atk_plane": 50,
         "atk_base": 25,
         "icon": "bullet",
-        "hash": "67d32a590d1f853e4cafe8bce9f09a54"
+        "hash": "aac80c6f825b8c9fd67d14a65535780a"
     },
     "rd_aatruck": {
         "uid": "rd_aatruck",
@@ -5237,9 +5237,9 @@
         "type": "direct",
         "aimTime": 100,
         "fireTime": 100,
-        "reloadTime": 600,
+        "reloadTime": 400,
         "coolTime": 0,
-        "clip": 20,
+        "clip": 30,
         "range": {
             "min": 0,
             "max": 90
@@ -5248,8 +5248,8 @@
             "min": 0,
             "max": 0
         },
-        "damage": 35,
-        "damagePerLvl": 1,
+        "damage": 45,
+        "damagePerLvl": 2,
         "radius": 0,
         "dmgBonus": 0,
         "dmgBonusCount": 0,
@@ -5288,7 +5288,7 @@
         "atk_plane": 50,
         "atk_base": 5,
         "icon": "bullet",
-        "hash": "9c628c532f1d0286c55ace645ab41268"
+        "hash": "7b82d24e6c2d57fcf1f80373df7bba26"
     },
     "rd_attruck": {
         "uid": "rd_attruck",
@@ -6263,7 +6263,7 @@
         "uid": "rd_missiledef",
         "type": "homing",
         "aimTime": 300,
-        "fireTime": 1250,
+        "fireTime": 2000,
         "reloadTime": 3200,
         "coolTime": 0,
         "clip": 3,
@@ -6275,8 +6275,8 @@
             "min": 0,
             "max": 30
         },
-        "damage": 960,
-        "damagePerLvl": 96,
+        "damage": 1200,
+        "damagePerLvl": 120,
         "radius": 15,
         "dmgBonus": 0,
         "dmgBonusCount": 0,
@@ -6294,7 +6294,7 @@
         "isFireXZ": false,
         "canTargetMines": false,
         "turretYAngle": 0,
-        "rotation": 90,
+        "rotation": 180,
         "maxAngle": 0,
         "projectile": {
             "uid": "rd_missiledef_p",
@@ -6318,7 +6318,7 @@
         "atk_plane": 100,
         "atk_base": 10,
         "icon": "missile",
-        "hash": "a29a6909f1e4be43c4aba0093894444f"
+        "hash": "cd6e9eafe3d1ad0cbbff6fedebd7d369"
     },
     "rd_commandtank": {
         "uid": "rd_commandtank",
@@ -8645,21 +8645,21 @@
     "bk_mgtruck": {
         "uid": "bk_mgtruck",
         "type": "direct",
-        "aimTime": 100,
-        "fireTime": 100,
+        "aimTime": 200,
+        "fireTime": 50,
         "reloadTime": 1300,
         "coolTime": 0,
-        "clip": 40,
+        "clip": 50,
         "range": {
             "min": 0,
             "max": 120
         },
         "spread": {
             "min": 0,
-            "max": 20
+            "max": 30
         },
-        "damage": 50,
-        "damagePerLvl": 2,
+        "damage": 30,
+        "damagePerLvl": 1,
         "radius": 0,
         "dmgBonus": 0,
         "dmgBonusCount": 0,
@@ -8698,7 +8698,7 @@
         "atk_plane": 50,
         "atk_base": 25,
         "icon": "bullet",
-        "hash": "67d32a590d1f853e4cafe8bce9f09a54"
+        "hash": "aac80c6f825b8c9fd67d14a65535780a"
     },
     "bk_aatruck": {
         "uid": "bk_aatruck",
@@ -8763,9 +8763,9 @@
         "type": "direct",
         "aimTime": 100,
         "fireTime": 100,
-        "reloadTime": 600,
+        "reloadTime": 400,
         "coolTime": 0,
-        "clip": 20,
+        "clip": 30,
         "range": {
             "min": 0,
             "max": 90
@@ -8774,8 +8774,8 @@
             "min": 0,
             "max": 0
         },
-        "damage": 35,
-        "damagePerLvl": 1,
+        "damage": 45,
+        "damagePerLvl": 2,
         "radius": 0,
         "dmgBonus": 0,
         "dmgBonusCount": 0,
@@ -8814,7 +8814,7 @@
         "atk_plane": 50,
         "atk_base": 5,
         "icon": "bullet",
-        "hash": "9c628c532f1d0286c55ace645ab41268"
+        "hash": "7b82d24e6c2d57fcf1f80373df7bba26"
     },
     "bk_attruck": {
         "uid": "bk_attruck",
@@ -9672,14 +9672,14 @@
         "clip": 1000,
         "range": {
             "min": 0,
-            "max": 100
+            "max": 110
         },
         "spread": {
             "min": 5,
             "max": 30
         },
-        "damage": 162,
-        "damagePerLvl": 17,
+        "damage": 171,
+        "damagePerLvl": 18,
         "radius": 30,
         "dmgBonus": 0,
         "dmgBonusCount": 0,
@@ -9721,13 +9721,13 @@
         "atk_plane": 100,
         "atk_base": 25,
         "icon": "flame",
-        "hash": "23e6d72d254702b698095a76f41523f3"
+        "hash": "361aebcf6dc4bdcbdaf932334deda689"
     },
     "bk_missiledef": {
         "uid": "bk_missiledef",
         "type": "homing",
         "aimTime": 300,
-        "fireTime": 1250,
+        "fireTime": 2000,
         "reloadTime": 3200,
         "coolTime": 0,
         "clip": 3,
@@ -9739,8 +9739,8 @@
             "min": 0,
             "max": 30
         },
-        "damage": 800,
-        "damagePerLvl": 80,
+        "damage": 1000,
+        "damagePerLvl": 100,
         "radius": 15,
         "dmgBonus": 0,
         "dmgBonusCount": 0,
@@ -9758,7 +9758,7 @@
         "isFireXZ": false,
         "canTargetMines": false,
         "turretYAngle": 0,
-        "rotation": 90,
+        "rotation": 180,
         "maxAngle": 0,
         "projectile": {
             "uid": "bk_missiledef_p",
@@ -9782,7 +9782,7 @@
         "atk_plane": 100,
         "atk_base": 10,
         "icon": "missile",
-        "hash": "a29a6909f1e4be43c4aba0093894444f"
+        "hash": "cd6e9eafe3d1ad0cbbff6fedebd7d369"
     },
     "bk_megatankA": {
         "uid": "bk_megatankA",
