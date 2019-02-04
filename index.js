@@ -57,7 +57,8 @@ client.on("message", (message) => {
         // the current main feature of the bot: lookup mini stuff
         //===========================================================================//
         else if (command.startsWith("lookup")){
-            var uid = "null", uid2 = "null";
+            var uid = "null";
+            var uid2 = "null";
             command = command.toLowerCase();
             if (command.search("standard base") != -1){
                 uid = "rd_base";       
