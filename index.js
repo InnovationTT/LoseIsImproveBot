@@ -379,22 +379,22 @@ client.on("message", (message) => {
 
             let name = command.substring(6, command.length-2);
             // get targetting priority
-            numTargetPriority[0] = attacks[uid].targ_infantry;
-            numTargetPriority[1] = attacks[uid].targ_heavy;
-            numTargetPriority[2] = attacks[uid].targ_truck;
-            numTargetPriority[3] = attacks[uid].targ_tank;
-            numTargetPriority[4] = attacks[uid].targ_heli;
-            numTargetPriority[5] = attacks[uid].targ_plane;
-            numTargetPriority[6] = attacks[uid].targ_base;
+            numTargetPriority[0][0] = attacks[uid].targ_infantry;
+            numTargetPriority[1][0] = attacks[uid].targ_heavy;
+            numTargetPriority[2][0] = attacks[uid].targ_truck;
+            numTargetPriority[3][0] = attacks[uid].targ_tank;
+            numTargetPriority[4][0] = attacks[uid].targ_heli;
+            numTargetPriority[5][0] = attacks[uid].targ_plane;
+            numTargetPriority[6][0] = attacks[uid].targ_base;
            
             // loop through numTargetPriority to get order
             var max = 0;
             for(var i = 0; i < numTargetPriority.length; i++){
                 for(var j = 0; j < numTargetPriority.length-1; j++){
-                    if(numTargetPriority[j]<numTargetPriority[j+1]){
-                        let temp = numTargetPriority[j];
-                        numTargetPriority[j] = numTargetPriority[j+1];
-                        numTargetPriority[j+1] = temp;
+                    if(numTargetPriority[j][0]<numTargetPriority[j+1][0]){
+                        let temp = numTargetPriority[j][0];
+                        numTargetPriority[j][0] = numTargetPriority[j+1][0];
+                        numTargetPriority[j+1][0] = temp;
                     }
                 }
             }
