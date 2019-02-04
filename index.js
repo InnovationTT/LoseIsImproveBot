@@ -378,20 +378,44 @@ client.on("message", (message) => {
 
             let name = command.substring(6, command.length-2);
             // get targetting priority
-            // numTargetPriority[0] = attacks[uid].targ_infantry;
-            // numTargetPriority[1] = attacks[uid].targ_heavy;
-            // numTargetPriority[2] = attacks[uid].targ_truck;
-            // numTargetPriority[3] = attacks[uid].targ_tank;
-            // numTargetPriority[4] = attacks[uid].targ_heli;
-            // numTargetPriority[5] = attacks[uid].targ_plane;
-            // numTargetPriority[6] = attacks[uid].targ_base;
+            numTargetPriority[0] = attacks[uid].targ_infantry;
+            numTargetPriority[1] = attacks[uid].targ_heavy;
+            numTargetPriority[2] = attacks[uid].targ_truck;
+            numTargetPriority[3] = attacks[uid].targ_tank;
+            numTargetPriority[4] = attacks[uid].targ_heli;
+            numTargetPriority[5] = attacks[uid].targ_plane;
+            numTargetPriority[6] = attacks[uid].targ_base;
            
             // loop through numTargetPriority to get order
-            // var max = 0;
-            // for(var i = 0; i < numTargetPriority.length; i++){
-            //     if(numTargetPriority[i]>max)
-            //         max = numTargetPriority[i];
-            // }
+            var max = 0;
+            for(var i = 0; i < numTargetPriority.length; i++){
+                for(var j = 0; j < numTargetPriority.length-1; j++){
+                    if(numTargetPriority[j]<numTargetPriority[j+1]){
+                        let temp = numTargetPriority[j];
+                        numTargetPriority[j] = numTargetPriority[j+1];
+                        numTargetPriority[j+1] = temp;
+                    }
+                }
+            }
+            var targetPrioListString = " ";
+            for(var i = 0; i < numTargetPriority.length; i++){
+                if(numTargetPriority[i][1] == 1)
+                    targetPrioListString += "Light Infantry, ";
+                else if(numTargetPriority[i][1] == 2)
+                    targetPrioListString += "Heavy Infantry, ";
+                else if(numTargetPriority[i][1] == 3)
+                     targetPrioListString += "Trucks, ";
+                else if(numTargetPriority[i][1] == 4)
+                     targetPrioListString += "Tanks, ";
+                else if(numTargetPriority[i][1] == 5)
+                     targetPrioListString += "Helicopters, ";
+                else if(numTargetPriority[i][1] == 6)
+                     targetPrioListString += "Planes, ";
+                else if(numTargetPriority[i][1] == 7)
+                     targetPrioListString += "Bunkers and Bases, ";
+                //["Light Infantry", "Heavy Infantry", "Trucks", "Tanks", "Helicopters", "Planes", "Bunker and Bases"];
+            }
+            message.channel.send("Target Prio List: "+targetPrioListString);
             // for(var i = 0; i < numTargetPriority.length; i++){
             //     for (var j = 0; j < numTargetPriority.length; j++){
             //         if (numTargetPriority[i] < numTargetPriority[j] && numTargetPriority[i] !== numTargetPriority[j]){
