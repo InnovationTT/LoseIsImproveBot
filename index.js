@@ -14,7 +14,7 @@ var constants = require("./constants.json");
 var entities = require("./entities.json");
 var type, aimTime, fireTime, reloadTime, clip, rangeMin, rangeMax, damage, radius;
 var lvl;  // modifier per lvl
-var numTargetPriority = [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6]];
+var numTargetPriority = [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [0, 7]];
 var targetPriority = ["Light Infantry", "Heavy Infantry", "Trucks", "Tanks", "Helicopters", "Planes", "Bunker and Bases"];
 var targPrio = "Target Priority: ";
 
