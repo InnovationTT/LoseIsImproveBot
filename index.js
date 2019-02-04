@@ -392,9 +392,11 @@ client.on("message", (message) => {
             for(var i = 0; i < numTargetPriority.length; i++){
                 for(var j = 0; j < numTargetPriority.length-1; j++){
                     if(numTargetPriority[j][0]<numTargetPriority[j+1][0]){
-                        let temp = numTargetPriority[j][0];
+                        let temp = numTargetPriority[j][0], temp2 = numTargetPriority[j][1];
                         numTargetPriority[j][0] = numTargetPriority[j+1][0];
+                        numTargetPriority[j][1] = numTargetPriority[j+1][1];
                         numTargetPriority[j+1][0] = temp;
+                        numTargetPriority[j+1][1] = temp2;
                     }
                 }
             }
