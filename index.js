@@ -418,10 +418,10 @@ client.on("message", (message) => {
                         targetPrioListString += "Planes, ";
                     else if(numTargetPriority[i][1] == 7)
                         targetPrioListString += "Bunkers and Bases, ";
-                }
-                
+                }           
                 //["Light Infantry", "Heavy Infantry", "Trucks", "Tanks", "Helicopters", "Planes", "Bunker and Bases"];
             }
+            targetPrioListString = targetPrioListString.slice(targetPrioListString.length-2)
             message.channel.send("Target Prio List: "+targetPrioListString);
             // for(var i = 0; i < numTargetPriority.length; i++){
             //     for (var j = 0; j < numTargetPriority.length; j++){
@@ -471,7 +471,7 @@ client.on("message", (message) => {
                     } else {
                         attackType2 = attacks[uid2].type;
                     }
-                    attack2 = "\nAttack Type 2:\t\t\t\t"+attackType2+"\nDamage:   \t\t\t\t\t"+(attacks[uid2].damage+dmgOffset2)+"\nClip Size:\t\t\t\t\t"+attacks[uid2].clip+"\nAim Time: \t\t\t\t\t"+attacks[uid2].aimTime/1000+"s\nFire Time:\t\t\t\t\t"+attacks[uid2].fireTime/1000+"s\nReload Time:  \t\t\t\t"+attacks[uid2].reloadTime/1000+"s\nRange:\t\t\t\t\t\tfrom "+attacks[uid2]["range"].min/10+"m to "+attacks[uid2]["range"].max/10+"m"+"\nSpread: \t\t\t\t\t  from "+attacks[uid2]["spread"].min/10+"m to "+attacks[uid2]["spread"].max/10+"m"+"\nRadius:   \t\t\t\t\t"+attacks[uid2].radius/10+"m\n-------------------------------------------------\nDamage vs Light Infantry: \t"+attacks[uid2].atk_infantry+"%\n"+"Damage vs Heavy Infantry: \t"+attacks[uid2].atk_heavy+"%\n"+"Damage vs Trucks: \t\t\t"+attacks[uid2].atk_truck+"%\n"+"Damage vs Tanks:  \t\t\t"+attacks[uid2].atk_tank+"%\n"+"Damage vs Helicopters:\t\t"+attacks[uid2].atk_heli+"%\n"+"Damage vs Planes: \t\t\t"+attacks[uid2].atk_plane+"%\n"+"Damage vs Bunkers and Base:   "+attacks[uid2].atk_base+"%\n";
+                    attack2 = "\nAttack Type 2:\t\t\t\t"+attackType2+"\nDamage:   \t\t\t\t\t"+(attacks[uid2].damage+dmgOffset2)+"\nClip Size:\t\t\t\t\t"+attacks[uid2].clip+"\nAim Time: \t\t\t\t\t"+attacks[uid2].aimTime/1000+"s\nFire Time:\t\t\t\t\t"+attacks[uid2].fireTime/1000+"s\nReload Time:  \t\t\t\t"+attacks[uid2].reloadTime/1000+"s\nRange:\t\t\t\t\t\tfrom "+attacks[uid2]["range"].min/10+"m to "+attacks[uid2]["range"].max/10+"m"+"\nSpread: \t\t\t\t\t  from "+attacks[uid2]["spread"].min/10+"m to "+attacks[uid2]["spread"].max/10+"m"+"\nRadius:   \t\t\t\t\t"+attacks[uid2].radius/10+"m\n-------------------------------------------------\n"+(targetPrioListString == " " ? "Target Prio:\n" : void 0)+"Damage vs Light Infantry: \t"+attacks[uid2].atk_infantry+"%\n"+"Damage vs Heavy Infantry: \t"+attacks[uid2].atk_heavy+"%\n"+"Damage vs Trucks: \t\t\t"+attacks[uid2].atk_truck+"%\n"+"Damage vs Tanks:  \t\t\t"+attacks[uid2].atk_tank+"%\n"+"Damage vs Helicopters:\t\t"+attacks[uid2].atk_heli+"%\n"+"Damage vs Planes: \t\t\t"+attacks[uid2].atk_plane+"%\n"+"Damage vs Bunkers and Base:   "+attacks[uid2].atk_base+"%\n";
                     
                     if(attacks[uid2].type == "spawn"){
                         var lvlmultiplier = (4-cards[attacks[uid2]["projectile"].uid].rarity)/(4-cards[defaultuid].rarity);
