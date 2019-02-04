@@ -421,7 +421,9 @@ client.on("message", (message) => {
                 }           
                 //["Light Infantry", "Heavy Infantry", "Trucks", "Tanks", "Helicopters", "Planes", "Bunker and Bases"];
             }
-            targetPrioListString = targetPrioListString.substring(0,targetPrioListString.length-2);
+            if(targetPrioListString.length>2);
+                targetPrioListString = targetPrioListString.substring(0,targetPrioListString.length-2);
+            
             message.channel.send("Target Prio List: "+targetPrioListString);
             // for(var i = 0; i < numTargetPriority.length; i++){
             //     for (var j = 0; j < numTargetPriority.length; j++){
