@@ -172,12 +172,12 @@
         "mod3": null,
         "isDisabled": false,
         "unlockData": {
-            "type": "mission",
-            "uid": "bl040"
+            "type": "factionLevel",
+            "level": 22
         },
         "isHardLock": true,
         "ytPreview": "-yMkvSCXSDs",
-        "hash": "8e9a0b0e8bf833d3b42a0851c0400568"
+        "hash": "aab917906d134e49da7d8299d89a08aa"
     },
     "bl_rifle": {
         "uid": "bl_rifle",
@@ -474,7 +474,7 @@
         "rarity": 3,
         "faction": "blue",
         "type": "infantry",
-        "squad": 1,
+        "squad": 5,
         "mp": 2,
         "league": 21,
         "vs_infantry": 7,
@@ -494,7 +494,7 @@
         },
         "isHardLock": true,
         "ytPreview": "n13crck5qhA",
-        "hash": "0eeb37925b4c209d265897c02a5ffa14"
+        "hash": "8193d5e6f75a483f7962d524a595bad7"
     },
     "bl_aainfantry": {
         "uid": "bl_aainfantry",
@@ -829,6 +829,30 @@
         "ytPreview": "_qpjCK_8YQ4",
         "hash": "a01d4fb811fcc7267e68c0cff41b391f"
     },
+    "bl_avenger": {
+        "uid": "bl_avenger",
+        "rarity": 3,
+        "faction": "blue",
+        "type": "truck",
+        "squad": 2,
+        "mp": 4,
+        "league": 1,
+        "vs_infantry": 8,
+        "vs_heavy": 8,
+        "vs_truck": 4,
+        "vs_tank": 0,
+        "vs_heli": 0,
+        "vs_plane": 0,
+        "vs_base": 5,
+        "mod1": null,
+        "mod2": null,
+        "mod3": null,
+        "isDisabled": false,
+        "unlockData": null,
+        "isHardLock": false,
+        "ytPreview": null,
+        "hash": "0a495fa5f1af53440e9ad6287b717fd3"
+    },
     "bl_tank": {
         "uid": "bl_tank",
         "rarity": 0,
@@ -913,7 +937,7 @@
         "faction": "blue",
         "type": "tank",
         "squad": 1,
-        "mp": 4,
+        "mp": 3,
         "league": 1,
         "vs_infantry": 7,
         "vs_heavy": 7,
@@ -932,7 +956,7 @@
         },
         "isHardLock": true,
         "ytPreview": "AUxDGh_9eEw",
-        "hash": "af0f447bf607321f25fe671b219a012c"
+        "hash": "62911056e0d3debf8e8ee630243a7393"
     },
     "bl_rocketart": {
         "uid": "bl_rocketart",
@@ -1194,7 +1218,7 @@
         "rarity": 2,
         "faction": "blue",
         "type": "plane",
-        "squad": 1,
+        "squad": 3,
         "mp": 5,
         "league": 21,
         "vs_infantry": 8,
@@ -1215,7 +1239,7 @@
         },
         "isHardLock": true,
         "ytPreview": "DV1h4quejJ8",
-        "hash": "6e5142f296067d0dd5aad747211fb073"
+        "hash": "e7e23b2f4ec93f26825e3bca570a61d1"
     },
     "bl_bomber": {
         "uid": "bl_bomber",
@@ -1496,12 +1520,12 @@
         "mod3": null,
         "isDisabled": false,
         "unlockData": {
-            "type": "mission",
-            "uid": "rd040"
+            "type": "factionLevel",
+            "level": 22
         },
         "isHardLock": true,
         "ytPreview": "Xaa5wGPJe04",
-        "hash": "c34eadbebf6e794a9725ec87ad750c3e"
+        "hash": "1081d39e3f1179dd1b69e1ed49365c63"
     },
     "rd_rifle": {
         "uid": "rd_rifle",
@@ -1791,7 +1815,7 @@
         "rarity": 3,
         "faction": "red",
         "type": "heavy",
-        "squad": 1,
+        "squad": 2,
         "mp": 4,
         "league": 16,
         "vs_infantry": 6,
@@ -1811,7 +1835,31 @@
         },
         "isHardLock": true,
         "ytPreview": "imKxo98MZo4",
-        "hash": "d9d74b75c510821e8a593809cbe1e37a"
+        "hash": "bc27b0ab44224fc09628677323550150"
+    },
+    "rd_kaboom": {
+        "uid": "rd_kaboom",
+        "rarity": 3,
+        "faction": "red",
+        "type": "heavy",
+        "squad": 2,
+        "mp": 3,
+        "league": -1,
+        "vs_infantry": 8,
+        "vs_heavy": 8,
+        "vs_truck": 6,
+        "vs_tank": 6,
+        "vs_heli": 0,
+        "vs_plane": 0,
+        "vs_base": 0,
+        "mod1": null,
+        "mod2": null,
+        "mod3": null,
+        "isDisabled": false,
+        "unlockData": null,
+        "isHardLock": false,
+        "ytPreview": null,
+        "hash": "27657bf1217357fd510d443008b55891"
     },
     "rd_mgtruck": {
         "uid": "rd_mgtruck",
@@ -1997,7 +2045,7 @@
         "faction": "red",
         "type": "truck",
         "squad": 2,
-        "mp": 5,
+        "mp": 4,
         "league": 6,
         "vs_infantry": 4,
         "vs_heavy": 7,
@@ -2016,7 +2064,7 @@
         },
         "isHardLock": true,
         "ytPreview": "1olXI01wPkI",
-        "hash": "600f0a039fb2008a466fa064548e733c"
+        "hash": "6cb62fad15c044d89fe467ebaf5a25b4"
     },
     "rd_railguntruck": {
         "uid": "rd_railguntruck",
@@ -2182,7 +2230,7 @@
         "faction": "red",
         "type": "tank",
         "squad": 1,
-        "mp": 4,
+        "mp": 3,
         "league": 1,
         "vs_infantry": 7,
         "vs_heavy": 7,
@@ -2201,7 +2249,7 @@
         },
         "isHardLock": true,
         "ytPreview": "TJHU31m7guE",
-        "hash": "fe45226e5e2656770a3e39b063cd5578"
+        "hash": "d01316428eb364ae447a5b0e997f6bc6"
     },
     "rd_rocketart": {
         "uid": "rd_rocketart",
@@ -2518,7 +2566,7 @@
         "faction": "red",
         "type": "plane",
         "squad": 1,
-        "mp": 6,
+        "mp": 5,
         "league": 21,
         "vs_infantry": 10,
         "vs_heavy": 9,
@@ -2537,7 +2585,7 @@
         },
         "isHardLock": true,
         "ytPreview": "--BRwBKpTkU",
-        "hash": "9ab1f4b7b1e10fd7739d88f7a0f0b49a"
+        "hash": "f96c72a934021086fa6cb1b35688a28e"
     },
     "rd_transport": {
         "uid": "rd_transport",
@@ -2766,12 +2814,12 @@
         "mod3": null,
         "isDisabled": false,
         "unlockData": {
-            "type": "mission",
-            "uid": "bk040"
+            "type": "factionLevel",
+            "level": 22
         },
         "isHardLock": true,
         "ytPreview": "px2eCwzTVcE",
-        "hash": "b0cd90056949a8c776b7f9c27ebe36d1"
+        "hash": "fb8d5aef53045a39e6bf1dd6b1f96876"
     },
     "bk_rifle": {
         "uid": "bk_rifle",
@@ -3011,7 +3059,7 @@
         "rarity": 3,
         "faction": "black",
         "type": "infantry",
-        "squad": 1,
+        "squad": 5,
         "mp": 2,
         "league": 21,
         "vs_infantry": 7,
@@ -3028,7 +3076,7 @@
         "unlockData": null,
         "isHardLock": false,
         "ytPreview": "5oomT5-p4GE",
-        "hash": "03662f0a49aa1c646e98c871fbbeb77f"
+        "hash": "d967792abd7ae63a658e73083cbf72da"
     },
     "bk_aainfantry": {
         "uid": "bk_aainfantry",
@@ -3188,7 +3236,7 @@
         "rarity": 3,
         "faction": "black",
         "type": "heavy",
-        "squad": 1,
+        "squad": 2,
         "mp": 4,
         "league": 16,
         "vs_infantry": 6,
@@ -3205,7 +3253,7 @@
         "unlockData": null,
         "isHardLock": false,
         "ytPreview": "ZWJP2ebtT_A",
-        "hash": "194a53440557dee95925645d4f8d177e"
+        "hash": "ece1d8d4ca4e9a13234c611205a12afc"
     },
     "bk_mgtruck": {
         "uid": "bk_mgtruck",
@@ -3366,7 +3414,7 @@
         "faction": "black",
         "type": "truck",
         "squad": 2,
-        "mp": 5,
+        "mp": 4,
         "league": 6,
         "vs_infantry": 4,
         "vs_heavy": 7,
@@ -3385,7 +3433,7 @@
         },
         "isHardLock": true,
         "ytPreview": "NrKKv3B5Ya0",
-        "hash": "c1664ddfe14228c71c3d56f5781ac196"
+        "hash": "f16d3262670e68b70136af854f5ab655"
     },
     "bk_apc": {
         "uid": "bk_apc",
@@ -3732,7 +3780,7 @@
         "rarity": 2,
         "faction": "black",
         "type": "plane",
-        "squad": 1,
+        "squad": 3,
         "mp": 5,
         "league": 16,
         "vs_infantry": 8,
@@ -3752,7 +3800,7 @@
         },
         "isHardLock": true,
         "ytPreview": "oQef1t4xzGo",
-        "hash": "23e051dd184a29ccf071e3bef7e59d03"
+        "hash": "29c871c6361148e2574f2944a04d416e"
     },
     "bk_bomber": {
         "uid": "bk_bomber",
@@ -3788,7 +3836,7 @@
         "faction": "black",
         "type": "plane",
         "squad": 1,
-        "mp": 7,
+        "mp": 6,
         "league": 21,
         "vs_infantry": 10,
         "vs_heavy": 9,
@@ -3807,6 +3855,6 @@
         },
         "isHardLock": true,
         "ytPreview": "17ddq6BvSB0",
-        "hash": "1de8aced9f550f3d62b4181b9bae6b1d"
+        "hash": "3c16a86baeb5128603acfba54a47752c"
     }
 }
